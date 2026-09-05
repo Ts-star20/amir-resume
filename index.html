@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>امیرمسعود عبدالهی بیدگلی | مدیر و متخصص تولید و تکنولوژی رنگ خودرو</title>
+
+  <meta name="description"
+        content="رزومه حرفه‌ای امیرمسعود عبدالهی بیدگلی، مدیر و متخصص تولید و تکنولوژی رنگ خودرو با بیش از ۱۵ سال سابقه همکاری با سایپا سیتروئن.">
+
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #687386;
+      --primary: #0b3d91;
+      --primary-dark: #082d6b;
+      --accent: #e5a11a;
+      --border: #e4e8ef;
+      --shadow: 0 15px 45px rgba(18, 35, 60, .08);
+      --radius: 22px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Tahoma,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.9;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1150px, calc(100% - 36px));
+      margin: auto;
+    }
+
+    /* NAVBAR */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: .92rem;
+      transition: .25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* HERO */
+
+    .hero {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(229,161,26,.15), transparent 30%),
+        radial-gradient(circle at 85% 80%, rgba(11,61,145,.18), transparent 35%),
+        linear-gradient(135deg, #f8fafc, #edf2f8);
+      padding: 90px 0 80px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(11,61,145,.09);
+      color: var(--primary);
+      border: 1px solid rgba(11,61,145,.15);
+      padding: 6px 15px;
+      border-radius: 50px;
+      font-size: .82rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 5vw, 4rem);
+      line-height: 1.35;
+      margin-bottom: 12px;
+      font-weight: 900;
+    }
+
+    .hero-title {
+      color: var(--primary);
+      font-size: clamp(1.15rem, 2.5vw, 1.6rem);
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero-description {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.03rem;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 12px 22px;
+      border-radius: 12px;
+      font-weight: bold;
+      display: inline-block;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .btn-light:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    /* PROFILE CARD */
+
+    .profile-card {
+      background: white;
+      border-radius: 30px;
+      padding: 35px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .profile-icon {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        linear-gradient(135deg, var(--primary), #173f78);
+      color: white;
+      font-size: 3.2rem;
+      font-weight: 900;
+      box-shadow: 0 15px 35px rgba(11,61,145,.25);
+    }
+
+    .profile-card h3 {
+      margin-bottom: 6px;
+    }
+
+    .profile-card p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* STATS */
+
+    .stats {
+      margin-top: -35px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .stat-number {
+      display: block;
+      color: var(--primary);
+      font-size: 1.8rem;
+      font-weight: 900;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 42px;
+    }
+
+    .section-heading span {
+      color: var(--accent);
+      font-weight: 900;
+      font-size: .85rem;
+    }
+
+    .section-heading h2 {
+      font-size: 2rem;
+      margin-top: 5px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 700px;
+      margin-top: 8px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    /* EXPERIENCE */
+
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      right: 15px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #d8dee8;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-right: 55px;
+      margin-bottom: 35px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      right: 7px;
+      top: 7px;
+      width: 18px;
+      height: 18px;
+      background: var(--primary);
+      border: 4px solid #dce7f7;
+      border-radius: 50%;
+    }
+
+    .timeline-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-card h3 {
+      margin-bottom: 5px;
+    }
+
+    .timeline-card .company {
+      color: var(--primary);
+      font-weight: bold;
+      font-size: .9rem;
+    }
+
+    .timeline-card p {
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    /* ACHIEVEMENTS */
+
+    .achievement-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .achievement {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .achievement-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .achievement h3 {
+      margin-bottom: 8px;
+    }
+
+    .achievement p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* EDUCATION */
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .education {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 27px;
+      box-shadow: var(--shadow);
+    }
+
+    .education .level {
+      color: var(--accent);
+      font-weight: bold;
+      font-size: .85rem;
+    }
+
+    .education h3 {
+      margin: 8px 0;
+    }
+
+    .education p {
+      color: var(--muted);
+    }
+
+    /* TRAINING */
+
+    .training {
+      background:
+        linear-gradient(135deg, #092f6d, #0b3d91);
+      color: white;
+    }
+
+    .training .section-heading p {
+      color: rgba(255,255,255,.75);
+    }
+
+    .training-box {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 25px;
+      padding: 35px;
+    }
+
+    .training-main {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .training-number {
+      font-size: 4rem;
+      line-height: 1;
+      font-weight: 900;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .training-main h3 {
+      margin-bottom: 7px;
+    }
+
+    .training-main p {
+      color: rgba(255,255,255,.75);
+    }
+
+    /* SKILLS */
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 10px 18px;
+      border-radius: 50px;
+      font-weight: bold;
+      box-shadow: 0 5px 20px rgba(0,0,0,.04);
+    }
+
+    /* CONTACT */
+
+    .contact-box {
+      background: white;
+      border-radius: 25px;
+      border: 1px solid var(--border);
+      padding: 45px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      max-width: 700px;
+      margin: 10px auto 25px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #101827;
+      color: white;
+      padding: 35px 0;
+      text-align: center;
+    }
+
+    footer p {
+      color: #9ba7b8;
+      font-size: .85rem;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 850px) {
+
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-card {
+        max-width: 420px;
+        margin: auto;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .achievement-grid,
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+
+      .container {
+        width: min(100% - 24px, 1150px);
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .training-main {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .training-number {
+        font-size: 3.3rem;
+      }
+
+      .contact-box {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container nav-inner">
+
+      <div class="logo">
+        امیرمسعود عبدالهی بیدگلی
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#about">معرفی</a></li>
+        <li><a href="#experience">سوابق</a></li>
+        <li><a href="#achievements">دستاوردها</a></li>
+        <li><a href="#education">تحصیلات</a></li>
+        <li><a href="#skills">مهارت‌ها</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <span class="badge">
+          رزومه حرفه‌ای
+        </span>
+
+        <h1>
+          امیرمسعود<br>
+          عبدالهی بیدگلی
+        </h1>
+
+        <div class="hero-title">
+          مدیر و متخصص تولید و تکنولوژی رنگ خودرو
+        </div>
+
+        <p class="hero-description">
+          متخصص حوزه تولید و تکنولوژی رنگ خودرو با بیش از
+          ۱۵ سال سابقه همکاری با سایپا سیتروئن و تجربه در
+          مدیریت و سرپرستی خطوط تولید، ارزیابی سیستم‌های
+          مدیریت کارخانه و فرآیندهای تولید کابین‌های رنگ.
+        </p>
+
+        <div class="buttons">
+          <a href="#experience" class="btn btn-primary">
+            مشاهده سوابق
+          </a>
+
+          <a href="#contact" class="btn btn-light">
+            اطلاعات بیشتر
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="profile-card">
+
+        <div class="profile-icon">
+          ا
+        </div>
+
+        <h3>
+          امیرمسعود عبدالهی بیدگلی
+        </h3>
+
+        <p>
+          متولد کاشان
+        </p>
+
+        <p>
+          مدیر و متخصص تولید و تکنولوژی رنگ خودرو
+        </p>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- STATS -->
+  <div class="stats">
+
+    <div class="container stats-grid">
+
+      <div class="stat">
+        <span class="stat-number">۱۵+</span>
+        <span class="stat-label">سال سابقه همکاری</span>
+      </div>
+
+      <div class="stat">
+        <span class="stat-number">۷۰۷</span>
+        <span class="stat-label">ساعت آموزش</span>
+      </div>
+
+      <div class="stat">
+        <span class="stat-number">۳۵۰+</span>
+        <span class="stat-label">پیشنهاد ارائه‌شده</span>
+      </div>
+
+      <div class="stat">
+        <span class="stat-number">۱۰۰</span>
+        <span class="stat-label">پیشنهاد اجراشده</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span>ABOUT</span>
+        <h2>معرفی حرفه‌ای</h2>
+        <p>
+          نگاهی کوتاه به مسیر حرفه‌ای و تخصصی
+          امیرمسعود عبدالهی بیدگلی
+        </p>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="card">
+
+          <h3>تخصص حرفه‌ای</h3>
+
+          <p>
+            دارای سابقه تخصصی در حوزه تولید و تکنولوژی
+            رنگ خودرو و تجربه فعالیت در محیط صنعتی
+            سایپا سیتروئن. بخشی از تجربه حرفه‌ای شامل
+            سرپرستی تولید سالن رنگ، مسئولیت تولید کابین‌های
+            رنگ و کارشناسی ارزیابی سیستم مدیریت کارخانه است.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>مسیر توسعه و نوآوری</h3>
+
+          <p>
+            ارائه بیش از ۳۵۰ پیشنهاد در طول دوران همکاری
+            با سایپا و اجرای ۱۰۰ پیشنهاد، در کنار انتخاب
+            به‌عنوان یکی از برترین‌های نظام پیشنهادات
+            در سال ۱۳۹۹، بخشی از سابقه فعالیت در حوزه
+            بهبود و نوآوری حرفه‌ای است.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span>EXPERIENCE</span>
+        <h2>سوابق حرفه‌ای</h2>
+        <p>
+          تجربه‌های کلیدی در حوزه تولید، مدیریت و
+          ارزیابی سیستم‌های کارخانه
+        </p>
+      </div>
+
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-card">
+
+            <h3>
+              سرپرست تولید سالن رنگ
+            </h3>
+
+            <div class="company">
+              سایپا سیتروئن
+            </div>
+
+            <p>
+              فعالیت در حوزه مدیریت و سرپرستی فرآیندهای
+              تولید در سالن رنگ خودرو.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-card">
+
+            <h3>
+              کارشناس ارزیابی سیستم مدیریت کارخانه
+            </h3>
+
+            <div class="company">
+              سایپا سیتروئن
+            </div>
+
+            <p>
+              فعالیت در زمینه ارزیابی سیستم مدیریت کارخانه
+              و بررسی فرآیندهای سازمانی و تولیدی.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-card">
+
+            <h3>
+              مسئول / سرپرست تولید کابین‌های رنگ
+            </h3>
+
+            <div class="company">
+              سایپا سیتروئن
+            </div>
+
+            <p>
+              تجربه مسئولیت و سرپرستی فرآیند تولید
+              کابین‌های رنگ در محیط صنعتی خودرو.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span>ACHIEVEMENTS</span>
+        <h2>دستاوردها</h2>
+        <p>
+          بخشی از مهم‌ترین دستاوردهای حرفه‌ای
+        </p>
+      </div>
+
+
+      <div class="achievement-grid">
+
+        <div class="achievement">
+
+          <div class="achievement-icon">
+            🏭
+          </div>
+
+          <h3>
+            بیش از ۱۵ سال تجربه
+          </h3>
+
+          <p>
+            سابقه همکاری حرفه‌ای با سایپا سیتروئن
+            در حوزه‌های مختلف تولید و مدیریت.
+          </p>
+
+        </div>
+
+
+        <div class="achievement">
+
+          <div class="achievement-icon">
+            💡
+          </div>
+
+          <h3>
+            ۳۵۰+ پیشنهاد
+          </h3>
+
+          <p>
+            ارائه بیش از ۳۵۰ پیشنهاد طی دوران همکاری
+            با سایپا.
+          </p>
+
+        </div>
+
+
+        <div class="achievement">
+
+          <div class="achievement-icon">
+            ⚙️
+          </div>
+
+          <h3>
+            ۱۰۰ پیشنهاد اجراشده
+          </h3>
+
+          <p>
+            اجرای ۱۰۰ پیشنهاد در مسیر بهبود و
+            توسعه فرآیندها.
+          </p>
+
+        </div>
+
+
+        <div class="achievement">
+
+          <div class="achievement-icon">
+            🏆
+          </div>
+
+          <h3>
+            برگزیده نظام پیشنهادات
+          </h3>
+
+          <p>
+            انتخاب به‌عنوان یکی از برترین‌های
+            نظام پیشنهادات در سال ۱۳۹۹.
+          </p>
+
+        </div>
+
+
+        <div class="achievement">
+
+          <div class="achievement-icon">
+            🎨
+          </div>
+
+          <h3>
+            تخصص تکنولوژی رنگ
+          </h3>
+
+          <p>
+            تجربه تخصصی در حوزه تولید و تکنولوژی
+            رنگ خودرو.
+          </p>
+
+        </div>
+
+
+        <div class="achievement">
+
+          <div class="achievement-icon">
+            🌍
+          </div>
+
+          <h3>
+            آموزش تخصصی فرانسه
+          </h3>
+
+          <p>
+            گذراندن دوره یک‌ماهه تخصصی BITON
+            سقف دورنگ در پژو سیتروئن فرانسه.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TRAINING -->
+  <section class="training">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span>TRAINING</span>
+
+        <h2>
+          آموزش و تخصص
+        </h2>
+
+        <p>
+          سرمایه‌گذاری مستمر در توسعه دانش و
+          مهارت‌های تخصصی
+        </p>
+
+      </div>
+
+
+      <div class="training-box">
+
+        <div class="training-main">
+
+          <div class="training-number">
+            ۷۰۷
+          </div>
+
+          <div>
+
+            <h3>
+              ساعت آموزش
+            </h3>
+
+            <p>
+              مجموع ۷۰۷ ساعت آموزش تخصصی و حرفه‌ای
+              در طول مسیر کاری.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SPECIAL COURSE -->
+  <section>
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span>INTERNATIONAL TRAINING</span>
+
+        <h2>
+          دوره تخصصی پژو سیتروئن فرانسه
+        </h2>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          BITON — سقف دورنگ
+        </h3>
+
+        <p>
+          گذراندن دوره یک‌ماهه تخصصی رنگ BITON
+          مربوط به سقف دورنگ در پژو سیتروئن فرانسه.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EDUCATION -->
+  <section id="education">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span>EDUCATION</span>
+
+        <h2>
+          تحصیلات
+        </h2>
+
+        <p>
+          سوابق تحصیلی
+        </p>
+
+      </div>
+
+
+      <div class="education-grid">
+
+        <div class="education">
+
+          <div class="level">
+            دیپلم
+          </div>
+
+          <h3>
+            الکتروتکنیک
+          </h3>
+
+          <p>
+            دیپلم الکتروتکنیک
+          </p>
+
+        </div>
+
+
+        <div class="education">
+
+          <div class="level">
+            کاردانی
+          </div>
+
+          <h3>
+            تعمیرات سخت‌افزار کامپیوتر
+          </h3>
+
+          <p>
+            کاردانی تعمیرات سخت‌افزار کامپیوتر
+          </p>
+
+        </div>
+
+
+        <div class="education">
+
+          <div class="level">
+            کارشناسی
+          </div>
+
+          <h3>
+            مهندسی تکنولوژی ارتباطات و فناوری اطلاعات
+          </h3>
+
+          <p>
+            مهندسی تکنولوژی ارتباطات و فناوری اطلاعات
+            (ICT)
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SKILLS -->
+  <section id="skills">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span>SKILLS</span>
+
+        <h2>
+          مهارت‌های نرم‌افزاری
+        </h2>
+
+        <p>
+          ابزارهای نرم‌افزاری مورد استفاده
+        </p>
+
+      </div>
+
+
+      <div class="skills">
+
+        <div class="skill">
+          Microsoft Word
+        </div>
+
+        <div class="skill">
+          Microsoft PowerPoint
+        </div>
+
+        <div class="skill">
+          Microsoft Excel
+        </div>
+
+        <div class="skill">
+          اینترنت
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <h2>
+          امیرمسعود عبدالهی بیدگلی
+        </h2>
+
+        <p>
+          مدیر و متخصص تولید و تکنولوژی رنگ خودرو
+        </p>
+
+        <div class="buttons" style="justify-content:center">
+
+          <a href="#about" class="btn btn-primary">
+            مشاهده رزومه
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container">
+
+      <p>
+        © ۱۴۰۵ — امیرمسعود عبدالهی بیدگلی
+      </p>
+
+      <p>
+        مدیر و متخصص تولید و تکنولوژی رنگ خودرو
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+  </html>
