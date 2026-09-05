@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ts-star20.github.io/amir-resume/sitemap.xml
