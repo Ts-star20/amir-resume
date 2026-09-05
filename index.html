@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>امیرمسعود عبدالهی بیدگلی | متخصص تولید و تکنولوژی رنگ خودرو</title>
+<title>امیرمسعود عبدالهی بیدگلی | مدیر و متخصص تولید و تکنولوژی رنگ خودرو</title>
 
 <meta name="description" content="پروفایل حرفه‌ای امیرمسعود عبدالهی بیدگلی، مدیر و متخصص تولید و تکنولوژی رنگ خودرو با بیش از ۱۵ سال سابقه همکاری با سایپا سیتروئن.">
 
@@ -16,16 +16,20 @@
 }
 
 :root{
-    --navy:#071a33;
-    --blue:#1257a6;
-    --blue2:#1d75d1;
-    --gold:#d8a22a;
-    --white:#fff;
-    --light:#f4f7fb;
-    --text:#172235;
-    --muted:#687386;
-    --border:#e3e8ef;
-    --shadow:0 18px 50px rgba(7,26,51,.10);
+    --navy:#06152b;
+    --navy2:#0b2545;
+    --blue:#1769c2;
+    --blue2:#2b83e6;
+    --gold:#d7a52b;
+    --gold2:#f0c65a;
+    --white:#ffffff;
+    --light:#f5f7fa;
+    --light2:#edf2f7;
+    --text:#172337;
+    --muted:#697689;
+    --border:#e2e8f0;
+    --shadow:0 20px 60px rgba(6,21,43,.10);
+    --radius:24px;
 }
 
 html{
@@ -49,15 +53,15 @@ a{
     margin:auto;
 }
 
-/* NAV */
+/* ================= NAV ================= */
 
 nav{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(255,255,255,.94);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid var(--border);
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(226,232,240,.9);
 }
 
 .nav{
@@ -68,7 +72,7 @@ nav{
 }
 
 .logo{
-    font-size:18px;
+    font-size:17px;
     font-weight:900;
     color:var(--navy);
 }
@@ -79,12 +83,13 @@ nav{
 
 .menu{
     display:flex;
-    gap:28px;
+    gap:26px;
 }
 
 .menu a{
     color:var(--muted);
-    font-size:14px;
+    font-size:13px;
+    font-weight:bold;
     transition:.25s;
 }
 
@@ -92,52 +97,83 @@ nav{
     color:var(--blue);
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
-    min-height:650px;
+    position:relative;
+    overflow:hidden;
+    min-height:690px;
     display:flex;
     align-items:center;
     color:white;
+
     background:
-        radial-gradient(circle at 80% 20%,rgba(29,117,209,.35),transparent 30%),
-        radial-gradient(circle at 10% 90%,rgba(216,162,42,.18),transparent 30%),
-        linear-gradient(135deg,#06172d,#0b2f5c 60%,#1257a6);
+        radial-gradient(circle at 85% 15%,rgba(43,131,230,.32),transparent 28%),
+        radial-gradient(circle at 15% 90%,rgba(215,165,43,.15),transparent 25%),
+        linear-gradient(135deg,#041226,#0a2a50 60%,#125ca8);
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:50%;
+    left:-250px;
+    bottom:-250px;
 }
 
 .hero-grid{
+    position:relative;
+    z-index:2;
     display:grid;
     grid-template-columns:1fr 390px;
-    gap:70px;
+    gap:80px;
     align-items:center;
 }
 
-.tag{
-    display:inline-block;
-    border:1px solid rgba(255,255,255,.25);
-    background:rgba(255,255,255,.08);
-    padding:7px 17px;
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:8px 15px;
     border-radius:50px;
-    font-size:13px;
-    margin-bottom:20px;
-}
-
-.hero h1{
-    font-size:clamp(34px,5vw,62px);
-    line-height:1.35;
-    font-weight:900;
-    margin-bottom:8px;
-}
-
-.hero h2{
-    color:#e7b83e;
-    font-size:clamp(18px,2.5vw,27px);
+    border:1px solid rgba(255,255,255,.17);
+    background:rgba(255,255,255,.07);
+    color:rgba(255,255,255,.85);
+    font-size:12px;
+    font-weight:bold;
     margin-bottom:22px;
 }
 
-.hero p{
-    color:rgba(255,255,255,.78);
-    max-width:700px;
+.eyebrow:before{
+    content:"";
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--gold2);
+    box-shadow:0 0 15px rgba(240,198,90,.7);
+}
+
+.hero h1{
+    font-size:clamp(36px,5vw,64px);
+    line-height:1.3;
+    font-weight:900;
+    letter-spacing:-1px;
+    margin-bottom:12px;
+}
+
+.hero h2{
+    color:var(--gold2);
+    font-size:clamp(18px,2.5vw,28px);
+    line-height:1.6;
+    margin-bottom:22px;
+}
+
+.hero-description{
+    max-width:720px;
+    color:rgba(255,255,255,.72);
     font-size:16px;
 }
 
@@ -145,15 +181,22 @@ nav{
     display:flex;
     flex-wrap:wrap;
     gap:12px;
-    margin-top:28px;
+    margin-top:30px;
 }
 
 .btn{
-    padding:12px 23px;
-    border-radius:11px;
-    font-weight:bold;
-    font-size:14px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:13px 23px;
+    border-radius:12px;
+    font-size:13px;
+    font-weight:900;
     transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
 }
 
 .btn-primary{
@@ -163,203 +206,318 @@ nav{
 
 .btn-gold{
     background:var(--gold);
-    color:#172235;
+    color:#182335;
 }
 
-.btn:hover{
-    transform:translateY(-3px);
-}
+/* ================= PHOTO ================= */
 
-/* PHOTO */
-
-.photo-card{
+.photo-area{
     text-align:center;
 }
 
-.photo{
-    width:310px;
-    height:370px;
+.photo-frame{
+    width:320px;
+    height:390px;
     margin:auto;
-    border-radius:28px;
-    border:7px solid rgba(255,255,255,.14);
-    background:
-        linear-gradient(145deg,#174d88,#092542);
+    padding:7px;
+    border-radius:30px;
+    background:linear-gradient(145deg,rgba(255,255,255,.28),rgba(255,255,255,.05));
+    box-shadow:0 35px 80px rgba(0,0,0,.28);
+}
+
+.photo{
+    width:100%;
+    height:100%;
+    border-radius:24px;
     display:flex;
     align-items:center;
     justify-content:center;
-    box-shadow:0 30px 70px rgba(0,0,0,.25);
     overflow:hidden;
+    background:
+        radial-gradient(circle at 50% 35%,#245b91,transparent 28%),
+        linear-gradient(145deg,#123f70,#061b35);
 }
 
 .photo-placeholder{
-    font-size:85px;
-    font-weight:900;
+    width:115px;
+    height:115px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
     color:rgba(255,255,255,.9);
+    font-size:55px;
+    font-weight:900;
 }
 
-.photo-card small{
-    display:block;
-    margin-top:15px;
-    color:rgba(255,255,255,.6);
+.photo-caption{
+    margin-top:17px;
+    color:rgba(255,255,255,.55);
+    font-size:12px;
 }
 
-/* STATS */
+/* ================= STATS ================= */
 
 .stats{
-    margin-top:-50px;
     position:relative;
-    z-index:5;
+    z-index:10;
+    margin-top:-55px;
 }
 
 .stats-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:15px;
+    gap:16px;
 }
 
 .stat{
+    position:relative;
+    overflow:hidden;
     background:white;
     border:1px solid var(--border);
-    border-radius:18px;
-    padding:25px 15px;
+    border-radius:20px;
+    padding:27px 15px;
     text-align:center;
     box-shadow:var(--shadow);
+}
+
+.stat:before{
+    content:"";
+    position:absolute;
+    right:0;
+    top:0;
+    width:100%;
+    height:3px;
+    background:linear-gradient(90deg,var(--blue),var(--gold));
 }
 
 .stat strong{
     display:block;
     color:var(--blue);
-    font-size:31px;
+    font-size:34px;
+    font-weight:900;
+    line-height:1.3;
 }
 
 .stat span{
+    display:block;
+    margin-top:5px;
     color:var(--muted);
-    font-size:13px;
+    font-size:12px;
 }
 
-/* SECTION */
+/* ================= GENERAL SECTION ================= */
 
 section{
-    padding:95px 0;
+    padding:100px 0;
 }
 
-.section-title{
-    margin-bottom:45px;
+.section-head{
+    max-width:700px;
+    margin-bottom:48px;
 }
 
-.section-title small{
+.section-label{
     color:var(--gold);
+    font-size:11px;
     font-weight:900;
-    letter-spacing:1px;
+    letter-spacing:1.5px;
 }
 
-.section-title h2{
-    font-size:34px;
-    margin:5px 0;
+.section-head h2{
+    margin:6px 0 8px;
+    font-size:35px;
+    line-height:1.4;
 }
 
-.section-title p{
+.section-head p{
     color:var(--muted);
+    font-size:14px;
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
 
-.about{
+.about-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
+    grid-template-columns:1.1fr .9fr;
+    gap:22px;
 }
 
-.card{
+.about-card{
     background:white;
     border:1px solid var(--border);
-    border-radius:22px;
-    padding:32px;
+    border-radius:var(--radius);
+    padding:35px;
     box-shadow:var(--shadow);
 }
 
-.card h3{
+.about-card h3{
     color:var(--blue);
-    margin-bottom:13px;
+    font-size:19px;
+    margin-bottom:12px;
 }
 
-.card p{
+.about-card p{
     color:var(--muted);
+    font-size:14px;
 }
 
-/* EXPERIENCE */
+.focus-list{
+    margin-top:20px;
+    display:grid;
+    gap:11px;
+}
+
+.focus-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--text);
+    font-size:13px;
+    font-weight:bold;
+}
+
+.focus-item i{
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:var(--gold);
+    flex:none;
+}
+
+/* ================= EXPERIENCE ================= */
 
 .experience{
     background:white;
 }
 
 .timeline{
-    max-width:900px;
-    margin:auto;
+    max-width:920px;
     position:relative;
+    margin:auto;
 }
 
 .timeline:before{
     content:"";
     position:absolute;
-    right:16px;
+    right:17px;
     top:0;
     bottom:0;
     width:2px;
-    background:#dbe3ee;
+    background:#dce5ef;
 }
 
 .timeline-item{
     position:relative;
-    padding-right:55px;
-    margin-bottom:35px;
+    padding-right:58px;
+    margin-bottom:28px;
+}
+
+.timeline-item:last-child{
+    margin-bottom:0;
 }
 
 .dot{
     position:absolute;
     right:7px;
-    top:8px;
-    width:20px;
-    height:20px;
+    top:9px;
+    width:21px;
+    height:21px;
     border-radius:50%;
     background:var(--blue);
     border:5px solid #dceafa;
+    box-shadow:0 0 0 5px white;
 }
 
 .timeline-card{
     background:var(--light);
     border:1px solid var(--border);
-    border-radius:18px;
-    padding:25px;
+    border-radius:20px;
+    padding:27px;
+    transition:.25s;
+}
+
+.timeline-card:hover{
+    transform:translateX(-4px);
+    box-shadow:var(--shadow);
 }
 
 .timeline-card h3{
+    font-size:18px;
     margin-bottom:3px;
 }
 
-.timeline-card .company{
+.company{
     color:var(--blue);
-    font-weight:bold;
-    font-size:14px;
+    font-size:13px;
+    font-weight:900;
 }
 
 .timeline-card p{
     color:var(--muted);
+    font-size:13px;
     margin-top:9px;
 }
 
-/* ACHIEVEMENTS */
+/* ================= SPECIALTIES ================= */
+
+.specialties{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.specialty{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:28px;
+    box-shadow:0 10px 35px rgba(6,21,43,.06);
+    transition:.25s;
+}
+
+.specialty:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow);
+}
+
+.specialty-icon{
+    width:48px;
+    height:48px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#edf5ff;
+    color:var(--blue);
+    font-weight:900;
+    margin-bottom:18px;
+}
+
+.specialty h3{
+    font-size:17px;
+    margin-bottom:8px;
+}
+
+.specialty p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* ================= ACHIEVEMENTS ================= */
 
 .achievements{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    gap:18px;
 }
 
 .achievement{
     background:white;
     border:1px solid var(--border);
-    border-radius:20px;
+    border-radius:21px;
     padding:28px;
     box-shadow:var(--shadow);
     transition:.25s;
@@ -370,151 +528,204 @@ section{
 }
 
 .number{
-    font-size:38px;
-    font-weight:900;
+    font-size:35px;
     color:var(--blue);
+    font-weight:900;
+    line-height:1.3;
 }
 
 .achievement h3{
-    margin:5px 0;
+    font-size:16px;
+    margin:7px 0;
 }
 
 .achievement p{
     color:var(--muted);
-    font-size:14px;
+    font-size:13px;
 }
 
-/* INTERNATIONAL */
+/* ================= INTERNATIONAL ================= */
 
 .international{
-    background:var(--navy);
+    background:
+        radial-gradient(circle at 80% 20%,rgba(43,131,230,.18),transparent 30%),
+        var(--navy);
     color:white;
 }
 
-.international .section-title p{
-    color:rgba(255,255,255,.65);
+.international .section-head p{
+    color:rgba(255,255,255,.62);
 }
 
 .international-box{
     display:grid;
-    grid-template-columns:180px 1fr;
-    gap:35px;
+    grid-template-columns:190px 1fr;
+    gap:40px;
     align-items:center;
-    background:rgba(255,255,255,.07);
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:25px;
-    padding:35px;
+    background:rgba(255,255,255,.055);
+    border:1px solid rgba(255,255,255,.11);
+    border-radius:27px;
+    padding:38px;
 }
 
-.big{
-    font-size:52px;
-    color:var(--gold);
+.biton{
+    font-size:54px;
     font-weight:900;
+    color:var(--gold2);
+}
+
+.international-box h3{
+    font-size:20px;
+    margin-bottom:8px;
 }
 
 .international-box p{
-    color:rgba(255,255,255,.7);
+    color:rgba(255,255,255,.68);
+    font-size:14px;
 }
 
-/* EDUCATION */
+/* ================= EDUCATION ================= */
 
 .education{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    gap:18px;
 }
 
 .edu{
+    position:relative;
+    overflow:hidden;
     background:white;
     border:1px solid var(--border);
-    border-radius:20px;
-    padding:28px;
+    border-radius:21px;
+    padding:29px;
     box-shadow:var(--shadow);
+}
+
+.edu:after{
+    content:"";
+    position:absolute;
+    left:-30px;
+    bottom:-30px;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:#edf5ff;
 }
 
 .edu small{
     color:var(--gold);
-    font-weight:bold;
+    font-weight:900;
+    font-size:11px;
 }
 
 .edu h3{
+    position:relative;
+    z-index:2;
+    font-size:17px;
     margin:8px 0;
 }
 
 .edu p{
+    position:relative;
+    z-index:2;
     color:var(--muted);
-    font-size:14px;
+    font-size:13px;
 }
 
-/* SKILLS */
+/* ================= SKILLS ================= */
 
 .skills{
     display:flex;
     flex-wrap:wrap;
-    gap:13px;
+    gap:12px;
 }
 
 .skill{
+    padding:13px 21px;
     background:white;
     border:1px solid var(--border);
     border-radius:50px;
-    padding:12px 21px;
-    font-weight:bold;
-    box-shadow:0 5px 20px rgba(0,0,0,.04);
+    box-shadow:0 7px 25px rgba(6,21,43,.05);
+    font-size:13px;
+    font-weight:900;
+    transition:.25s;
 }
 
-/* PROFILE */
+.skill:hover{
+    transform:translateY(-3px);
+    border-color:#c8d9ec;
+    color:var(--blue);
+}
+
+/* ================= CLOSING PROFILE ================= */
 
 .profile{
+    padding:90px 0;
     background:
-        linear-gradient(135deg,#0b315e,#1257a6);
+        radial-gradient(circle at 20% 30%,rgba(215,165,43,.12),transparent 25%),
+        linear-gradient(135deg,#09284d,#125ca8);
     color:white;
 }
 
 .profile-content{
-    max-width:900px;
+    max-width:850px;
     margin:auto;
     text-align:center;
 }
 
+.profile-content .mini{
+    color:var(--gold2);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1.5px;
+}
+
 .profile-content h2{
-    font-size:34px;
-    margin-bottom:15px;
+    font-size:36px;
+    margin:8px 0 14px;
 }
 
 .profile-content p{
-    color:rgba(255,255,255,.75);
+    color:rgba(255,255,255,.72);
+    font-size:15px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
-    background:#041020;
+    background:#030d1c;
     color:white;
-    padding:35px 0;
+    padding:38px 0;
     text-align:center;
 }
 
 footer strong{
     display:block;
+    font-size:16px;
     margin-bottom:5px;
 }
 
 footer span{
-    color:#8c99aa;
-    font-size:13px;
+    color:#8996a8;
+    font-size:12px;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 
-@media(max-width:900px){
+@media(max-width:950px){
+
+    .hero{
+        padding:80px 0;
+    }
 
     .hero-grid{
         grid-template-columns:1fr;
         text-align:center;
+        gap:55px;
     }
 
-    .hero p{
+    .hero-description{
         margin:auto;
     }
 
@@ -526,13 +737,19 @@ footer span{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .about{
+    .about-grid{
         grid-template-columns:1fr;
     }
 
+    .specialties,
     .achievements,
     .education{
         grid-template-columns:1fr 1fr;
+    }
+
+    .photo-frame{
+        width:280px;
+        height:340px;
     }
 
     .menu{
@@ -542,23 +759,57 @@ footer span{
 
 @media(max-width:600px){
 
-    .hero{
-        padding:70px 0;
-    }
-
-    .photo{
-        width:250px;
-        height:300px;
-    }
-
-    .stats-grid{
-        grid-template-columns:1fr 1fr;
+    .container{
+        width:90%;
     }
 
     section{
-        padding:65px 0;
+        padding:70px 0;
     }
 
+    .hero{
+        min-height:auto;
+        padding:65px 0 85px;
+    }
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .hero h2{
+        font-size:19px;
+    }
+
+    .hero-description{
+        font-size:14px;
+    }
+
+    .photo-frame{
+        width:245px;
+        height:300px;
+    }
+
+    .stats{
+        margin-top:-35px;
+    }
+
+    .stats-grid{
+        gap:10px;
+    }
+
+    .stat{
+        padding:20px 10px;
+    }
+
+    .stat strong{
+        font-size:28px;
+    }
+
+    .section-head h2{
+        font-size:28px;
+    }
+
+    .specialties,
     .achievements,
     .education{
         grid-template-columns:1fr;
@@ -567,10 +818,27 @@ footer span{
     .international-box{
         grid-template-columns:1fr;
         text-align:center;
+        padding:28px;
     }
 
-    .section-title h2{
-        font-size:28px;
+    .biton{
+        font-size:43px;
+    }
+
+    .timeline-item{
+        padding-right:45px;
+    }
+
+    .timeline:before{
+        right:13px;
+    }
+
+    .dot{
+        right:3px;
+    }
+
+    .profile-content h2{
+        font-size:29px;
     }
 }
 </style>
@@ -589,6 +857,7 @@ footer span{
     <div class="menu">
         <a href="#about">معرفی</a>
         <a href="#experience">سوابق</a>
+        <a href="#specialties">تخصص‌ها</a>
         <a href="#achievements">دستاوردها</a>
         <a href="#education">تحصیلات</a>
         <a href="#skills">مهارت‌ها</a>
@@ -605,9 +874,9 @@ footer span{
 
     <div>
 
-        <span class="tag">
-            PROFILE • PROFESSIONAL RESUME
-        </span>
+        <div class="eyebrow">
+            PROFESSIONAL PROFILE
+        </div>
 
         <h1>
             امیرمسعود<br>
@@ -618,7 +887,7 @@ footer span{
             مدیر و متخصص تولید و تکنولوژی رنگ خودرو
         </h2>
 
-        <p>
+        <p class="hero-description">
             متخصص حوزه تولید و تکنولوژی رنگ خودرو با بیش از
             ۱۵ سال سابقه همکاری با سایپا سیتروئن و تجربه در
             سرپرستی تولید سالن رنگ، ارزیابی سیستم مدیریت کارخانه
@@ -632,7 +901,7 @@ footer span{
             </a>
 
             <a href="#achievements" class="btn btn-gold">
-                دستاوردها
+                دستاوردهای حرفه‌ای
             </a>
 
         </div>
@@ -640,23 +909,34 @@ footer span{
     </div>
 
 
-    <div class="photo-card">
+    <!-- PHOTO PLACEHOLDER -->
+    <div class="photo-area">
 
-        <!--
-        بعداً عکس واقعی را اینجا قرار می‌دهیم.
-        برای مثال:
-        <img src="profile.jpg" alt="امیرمسعود عبدالهی بیدگلی">
-        -->
+        <div class="photo-frame">
 
-        <div class="photo">
-            <div class="photo-placeholder">
-                ا
+            <div class="photo">
+
+                <!--
+                عکس واقعی را بعداً اینجا قرار می‌دهیم:
+
+                <img
+                    src="profile.jpg"
+                    alt="امیرمسعود عبدالهی بیدگلی"
+                    style="width:100%;height:100%;object-fit:cover;"
+                >
+                -->
+
+                <div class="photo-placeholder">
+                    ا
+                </div>
+
             </div>
+
         </div>
 
-        <small>
+        <div class="photo-caption">
             متولد کاشان
-        </small>
+        </div>
 
     </div>
 
@@ -700,34 +980,58 @@ footer span{
 
 <div class="container">
 
-    <div class="section-title">
-        <small>ABOUT ME</small>
+    <div class="section-head">
+        <div class="section-label">ABOUT</div>
         <h2>پروفایل حرفه‌ای</h2>
         <p>
-            تجربه، تخصص و مسیر حرفه‌ای
+            تجربه، تخصص و مسیر حرفه‌ای در صنعت خودرو
         </p>
     </div>
 
-    <div class="about">
 
-        <div class="card">
-            <h3>تخصص حرفه‌ای</h3>
+    <div class="about-grid">
+
+        <div class="about-card">
+
+            <h3>تجربه حرفه‌ای</h3>
 
             <p>
                 بیش از ۱۵ سال سابقه همکاری با سایپا سیتروئن
                 در حوزه تولید و تکنولوژی رنگ خودرو، همراه با
                 تجربه در مسئولیت‌های اجرایی و کارشناسی کارخانه.
             </p>
+
         </div>
 
-        <div class="card">
-            <h3>نگاه به بهبود و نوآوری</h3>
 
-            <p>
-                ارائه بیش از ۳۵۰ پیشنهاد و اجرای ۱۰۰ پیشنهاد
-                طی دوران همکاری با سایپا، در کنار انتخاب به‌عنوان
-                یکی از برترین‌های نظام پیشنهادات در سال ۱۳۹۹.
-            </p>
+        <div class="about-card">
+
+            <h3>حوزه‌های تمرکز</h3>
+
+            <div class="focus-list">
+
+                <div class="focus-item">
+                    <i></i>
+                    تولید و فرآیندهای سالن رنگ
+                </div>
+
+                <div class="focus-item">
+                    <i></i>
+                    تکنولوژی رنگ خودرو
+                </div>
+
+                <div class="focus-item">
+                    <i></i>
+                    ارزیابی سیستم مدیریت کارخانه
+                </div>
+
+                <div class="focus-item">
+                    <i></i>
+                    بهبود و نوآوری
+                </div>
+
+            </div>
+
         </div>
 
     </div>
@@ -742,13 +1046,14 @@ footer span{
 
 <div class="container">
 
-    <div class="section-title">
-        <small>CAREER</small>
+    <div class="section-head">
+        <div class="section-label">CAREER</div>
         <h2>سوابق حرفه‌ای</h2>
         <p>
             تجربه در حوزه تولید، مدیریت و ارزیابی سیستم کارخانه
         </p>
     </div>
+
 
     <div class="timeline">
 
@@ -824,18 +1129,89 @@ footer span{
 </section>
 
 
+<!-- SPECIALTIES -->
+<section id="specialties">
+
+<div class="container">
+
+    <div class="section-head">
+        <div class="section-label">EXPERTISE</div>
+        <h2>حوزه‌های تخصصی</h2>
+        <p>
+            حوزه‌هایی که بخش اصلی تجربه حرفه‌ای را تشکیل می‌دهند
+        </p>
+    </div>
+
+
+    <div class="specialties">
+
+        <div class="specialty">
+
+            <div class="specialty-icon">
+                01
+            </div>
+
+            <h3>تولید خودرو</h3>
+
+            <p>
+                تجربه حرفه‌ای در محیط تولید صنعتی خودرو
+                و فعالیت در فرآیندهای تولید.
+            </p>
+
+        </div>
+
+
+        <div class="specialty">
+
+            <div class="specialty-icon">
+                02
+            </div>
+
+            <h3>تکنولوژی رنگ</h3>
+
+            <p>
+                تمرکز حرفه‌ای بر فرآیندها و تکنولوژی رنگ
+                در صنعت خودرو.
+            </p>
+
+        </div>
+
+
+        <div class="specialty">
+
+            <div class="specialty-icon">
+                03
+            </div>
+
+            <h3>مدیریت و ارزیابی</h3>
+
+            <p>
+                تجربه در ارزیابی سیستم مدیریت کارخانه
+                و فرآیندهای مدیریتی و تولیدی.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
 <!-- ACHIEVEMENTS -->
 <section id="achievements">
 
 <div class="container">
 
-    <div class="section-title">
-        <small>ACHIEVEMENTS</small>
+    <div class="section-head">
+        <div class="section-label">ACHIEVEMENTS</div>
         <h2>دستاوردهای حرفه‌ای</h2>
         <p>
-            مهم‌ترین شاخص‌های ثبت‌شده در مسیر حرفه‌ای
+            شاخص‌های ثبت‌شده در مسیر حرفه‌ای
         </p>
     </div>
+
 
     <div class="achievements">
 
@@ -847,6 +1223,7 @@ footer span{
             </p>
         </div>
 
+
         <div class="achievement">
             <div class="number">۳۵۰+</div>
             <h3>پیشنهاد</h3>
@@ -854,6 +1231,7 @@ footer span{
                 بیش از ۳۵۰ پیشنهاد طی دوران همکاری با سایپا.
             </p>
         </div>
+
 
         <div class="achievement">
             <div class="number">۱۰۰</div>
@@ -863,13 +1241,16 @@ footer span{
             </p>
         </div>
 
+
         <div class="achievement">
             <div class="number">۱۳۹۹</div>
             <h3>برگزیده نظام پیشنهادات</h3>
             <p>
-                انتخاب به‌عنوان یکی از برترین‌های نظام پیشنهادات.
+                انتخاب به‌عنوان یکی از برترین‌های نظام پیشنهادات
+                در سال ۱۳۹۹.
             </p>
         </div>
+
 
         <div class="achievement">
             <div class="number">۷۰۷</div>
@@ -879,12 +1260,13 @@ footer span{
             </p>
         </div>
 
+
         <div class="achievement">
             <div class="number">BITON</div>
-            <h3>تخصص بین‌المللی</h3>
+            <h3>تجربه تخصصی بین‌المللی</h3>
             <p>
-                دوره یک‌ماهه تخصصی رنگ BITON سقف دورنگ
-                در پژو سیتروئن فرانسه.
+                گذراندن دوره یک‌ماهه تخصصی رنگ BITON
+                سقف دورنگ در پژو سیتروئن فرانسه.
             </p>
         </div>
 
@@ -900,21 +1282,31 @@ footer span{
 
 <div class="container">
 
-    <div class="section-title">
-        <small>INTERNATIONAL EXPERIENCE</small>
-        <h2>آموزش تخصصی در فرانسه</h2>
+    <div class="section-head">
+
+        <div class="section-label">
+            INTERNATIONAL EXPERIENCE
+        </div>
+
+        <h2>
+            آموزش تخصصی در فرانسه
+        </h2>
+
         <p>
             تجربه تخصصی در تکنولوژی رنگ خودرو
         </p>
+
     </div>
+
 
     <div class="international-box">
 
-        <div class="big">
+        <div class="biton">
             BITON
         </div>
 
         <div>
+
             <h3>
                 دوره تخصصی رنگ سقف دورنگ
             </h3>
@@ -923,6 +1315,7 @@ footer span{
                 گذراندن دوره یک‌ماهه تخصصی رنگ BITON
                 سقف دورنگ در پژو سیتروئن فرانسه.
             </p>
+
         </div>
 
     </div>
@@ -937,40 +1330,67 @@ footer span{
 
 <div class="container">
 
-    <div class="section-title">
-        <small>EDUCATION</small>
-        <h2>تحصیلات</h2>
+    <div class="section-head">
+
+        <div class="section-label">
+            EDUCATION
+        </div>
+
+        <h2>
+            تحصیلات
+        </h2>
+
         <p>
-            سوابق تحصیلی
+            مسیر تحصیلی
         </p>
+
     </div>
+
 
     <div class="education">
 
         <div class="edu">
+
             <small>دیپلم</small>
-            <h3>الکتروتکنیک</h3>
+
+            <h3>
+                الکتروتکنیک
+            </h3>
+
             <p>
                 دیپلم الکتروتکنیک
             </p>
+
         </div>
 
+
         <div class="edu">
+
             <small>کاردانی</small>
-            <h3>تعمیرات سخت‌افزار کامپیوتر</h3>
+
+            <h3>
+                تعمیرات سخت‌افزار کامپیوتر
+            </h3>
+
             <p>
                 کاردانی تعمیرات سخت‌افزار کامپیوتر
             </p>
+
         </div>
 
+
         <div class="edu">
+
             <small>کارشناسی</small>
+
             <h3>
                 مهندسی تکنولوژی ارتباطات و فناوری اطلاعات
             </h3>
+
             <p>
                 مهندسی تکنولوژی ارتباطات و فناوری اطلاعات (ICT)
             </p>
+
         </div>
 
     </div>
@@ -985,20 +1405,40 @@ footer span{
 
 <div class="container">
 
-    <div class="section-title">
-        <small>SKILLS</small>
-        <h2>مهارت‌های نرم‌افزاری</h2>
+    <div class="section-head">
+
+        <div class="section-label">
+            SOFTWARE
+        </div>
+
+        <h2>
+            مهارت‌های نرم‌افزاری
+        </h2>
+
         <p>
-            ابزارهای نرم‌افزاری
+            ابزارهای نرم‌افزاری مورد استفاده
         </p>
+
     </div>
+
 
     <div class="skills">
 
-        <div class="skill">Microsoft Word</div>
-        <div class="skill">Microsoft Excel</div>
-        <div class="skill">Microsoft PowerPoint</div>
-        <div class="skill">Internet</div>
+        <div class="skill">
+            Microsoft Word
+        </div>
+
+        <div class="skill">
+            Microsoft Excel
+        </div>
+
+        <div class="skill">
+            Microsoft PowerPoint
+        </div>
+
+        <div class="skill">
+            Internet
+        </div>
 
     </div>
 
@@ -1007,10 +1447,14 @@ footer span{
 </section>
 
 
-<!-- PROFILE CLOSING -->
+<!-- CLOSING -->
 <section class="profile">
 
 <div class="container profile-content">
+
+    <div class="mini">
+        PROFESSIONAL PROFILE
+    </div>
 
     <h2>
         تجربه، تخصص و تعهد
@@ -1051,4 +1495,4 @@ footer span{
 </footer>
 
 </body>
-  </html>
+</html>
