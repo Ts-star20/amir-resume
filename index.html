@@ -4,32 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>امیرمسعود عبدالهی بیدگلی | مدیر و متخصص تولید و تکنولوژی رنگ خودرو</title>
+<title>امیرمسعود عبدالهی بیدگلی | متخصص تولید و تکنولوژی رنگ خودرو</title>
 
-<meta name="description" content="پروفایل حرفه‌ای امیرمسعود عبدالهی بیدگلی، مدیر و متخصص تولید و تکنولوژی رنگ خودرو با بیش از ۱۵ سال سابقه همکاری با سایپا سیتروئن.">
+<meta name="description" content="رزومه حرفه‌ای امیرمسعود عبدالهی بیدگلی، مدیر و متخصص تولید و تکنولوژی رنگ خودرو">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
 
 :root{
-    --navy:#06152b;
-    --navy2:#0b2545;
-    --blue:#1769c2;
-    --blue2:#2b83e6;
-    --gold:#d7a52b;
-    --gold2:#f0c65a;
+    --navy:#07111f;
+    --navy2:#0d1b2d;
+    --blue:#1976d2;
+    --gold:#d8a84e;
     --white:#ffffff;
+    --text:#1d2939;
+    --muted:#667085;
     --light:#f5f7fa;
-    --light2:#edf2f7;
-    --text:#172337;
-    --muted:#697689;
-    --border:#e2e8f0;
-    --shadow:0 20px 60px rgba(6,21,43,.10);
-    --radius:24px;
+    --border:#e4e7ec;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 html{
@@ -37,8 +34,8 @@ html{
 }
 
 body{
-    font-family:Tahoma,"Segoe UI",Arial,sans-serif;
-    background:var(--light);
+    font-family:'Vazirmatn',Tahoma,sans-serif;
+    background:#fff;
     color:var(--text);
     line-height:1.9;
 }
@@ -49,87 +46,84 @@ a{
 }
 
 .container{
-    width:min(1180px,92%);
+    width:min(1150px,92%);
     margin:auto;
 }
 
-/* ================= NAV ================= */
+/* NAV */
 
-nav{
-    position:sticky;
+.navbar{
+    position:fixed;
     top:0;
+    width:100%;
     z-index:1000;
-    background:rgba(255,255,255,.92);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(226,232,240,.9);
+    background:rgba(7,17,31,.92);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-.nav{
-    height:72px;
+.nav-inner{
+    min-height:72px;
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
 
 .logo{
-    font-size:17px;
     font-weight:900;
-    color:var(--navy);
+    font-size:20px;
+    color:#fff;
 }
 
 .logo span{
-    color:var(--blue);
+    color:var(--gold);
 }
 
-.menu{
+.nav-links{
     display:flex;
-    gap:26px;
+    gap:28px;
+    list-style:none;
 }
 
-.menu a{
-    color:var(--muted);
-    font-size:13px;
-    font-weight:bold;
+.nav-links a{
+    color:#dbe4ef;
+    font-size:14px;
     transition:.25s;
 }
 
-.menu a:hover{
-    color:var(--blue);
+.nav-links a:hover{
+    color:var(--gold);
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
+    min-height:100vh;
+    padding:145px 0 80px;
+    background:
+        radial-gradient(circle at 15% 25%,rgba(25,118,210,.22),transparent 30%),
+        radial-gradient(circle at 85% 75%,rgba(216,168,78,.12),transparent 25%),
+        linear-gradient(135deg,#06101d,#0d1c30 55%,#07111f);
+    color:#fff;
     position:relative;
     overflow:hidden;
-    min-height:690px;
-    display:flex;
-    align-items:center;
-    color:white;
-
-    background:
-        radial-gradient(circle at 85% 15%,rgba(43,131,230,.32),transparent 28%),
-        radial-gradient(circle at 15% 90%,rgba(215,165,43,.15),transparent 25%),
-        linear-gradient(135deg,#041226,#0a2a50 60%,#125ca8);
 }
 
-.hero:after{
+.hero:before{
     content:"";
     position:absolute;
     width:500px;
     height:500px;
-    border:1px solid rgba(255,255,255,.06);
+    border:1px solid rgba(216,168,78,.13);
     border-radius:50%;
-    left:-250px;
-    bottom:-250px;
+    left:-230px;
+    top:120px;
 }
 
 .hero-grid{
-    position:relative;
-    z-index:2;
     display:grid;
-    grid-template-columns:1fr 390px;
-    gap:80px;
+    grid-template-columns:1.25fr .75fr;
+    gap:70px;
     align-items:center;
 }
 
@@ -137,406 +131,414 @@ nav{
     display:inline-flex;
     align-items:center;
     gap:9px;
-    padding:8px 15px;
-    border-radius:50px;
-    border:1px solid rgba(255,255,255,.17);
-    background:rgba(255,255,255,.07);
-    color:rgba(255,255,255,.85);
-    font-size:12px;
-    font-weight:bold;
-    margin-bottom:22px;
+    color:var(--gold);
+    font-size:14px;
+    font-weight:700;
+    margin-bottom:18px;
 }
 
 .eyebrow:before{
     content:"";
-    width:7px;
-    height:7px;
-    border-radius:50%;
-    background:var(--gold2);
-    box-shadow:0 0 15px rgba(240,198,90,.7);
+    width:28px;
+    height:2px;
+    background:var(--gold);
 }
 
 .hero h1{
-    font-size:clamp(36px,5vw,64px);
-    line-height:1.3;
+    font-size:clamp(38px,6vw,70px);
+    line-height:1.25;
     font-weight:900;
-    letter-spacing:-1px;
-    margin-bottom:12px;
+    margin-bottom:15px;
 }
 
-.hero h2{
-    color:var(--gold2);
-    font-size:clamp(18px,2.5vw,28px);
-    line-height:1.6;
-    margin-bottom:22px;
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero-title{
+    font-size:21px;
+    color:#d7e2ee;
+    margin-bottom:25px;
+    font-weight:500;
 }
 
 .hero-description{
-    max-width:720px;
-    color:rgba(255,255,255,.72);
+    max-width:680px;
+    color:#aebdcd;
     font-size:16px;
+    line-height:2.2;
 }
 
-.buttons{
+.hero-buttons{
     display:flex;
+    gap:14px;
+    margin-top:32px;
     flex-wrap:wrap;
-    gap:12px;
-    margin-top:30px;
 }
 
 .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:13px 23px;
-    border-radius:12px;
-    font-size:13px;
-    font-weight:900;
+    padding:12px 24px;
+    border-radius:9px;
+    font-weight:700;
+    font-size:14px;
     transition:.25s;
 }
 
-.btn:hover{
+.btn-primary{
+    background:var(--gold);
+    color:#101820;
+}
+
+.btn-primary:hover{
     transform:translateY(-3px);
 }
 
-.btn-primary{
-    background:white;
-    color:var(--navy);
+.btn-outline{
+    border:1px solid rgba(255,255,255,.25);
+    color:#fff;
 }
 
-.btn-gold{
-    background:var(--gold);
-    color:#182335;
+.btn-outline:hover{
+    background:rgba(255,255,255,.08);
 }
 
-/* ================= PHOTO ================= */
+/* PROFILE */
 
-.photo-area{
-    text-align:center;
-}
-
-.photo-frame{
-    width:320px;
-    height:390px;
-    margin:auto;
-    padding:7px;
-    border-radius:30px;
-    background:linear-gradient(145deg,rgba(255,255,255,.28),rgba(255,255,255,.05));
-    box-shadow:0 35px 80px rgba(0,0,0,.28);
+.profile-card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:26px;
+    padding:28px;
+    backdrop-filter:blur(12px);
+    box-shadow:0 25px 70px rgba(0,0,0,.25);
 }
 
 .photo{
-    width:100%;
-    height:100%;
-    border-radius:24px;
+    height:330px;
+    border-radius:20px;
+    border:1px solid rgba(216,168,78,.4);
     display:flex;
     align-items:center;
     justify-content:center;
-    overflow:hidden;
     background:
-        radial-gradient(circle at 50% 35%,#245b91,transparent 28%),
-        linear-gradient(145deg,#123f70,#061b35);
+        linear-gradient(145deg,rgba(25,118,210,.25),rgba(216,168,78,.08));
+    position:relative;
+    overflow:hidden;
 }
 
 .photo-placeholder{
-    width:115px;
-    height:115px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.15);
-    color:rgba(255,255,255,.9);
-    font-size:55px;
+    font-size:110px;
     font-weight:900;
+    color:rgba(255,255,255,.13);
 }
 
-.photo-caption{
-    margin-top:17px;
-    color:rgba(255,255,255,.55);
+.photo-label{
+    position:absolute;
+    bottom:15px;
+    right:15px;
+    left:15px;
+    padding:10px;
+    border-radius:10px;
+    background:rgba(0,0,0,.35);
+    color:#dce6f0;
+    text-align:center;
     font-size:12px;
 }
 
-/* ================= STATS ================= */
+.profile-mini{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:18px;
+}
+
+.mini{
+    padding:13px;
+    border-radius:12px;
+    background:rgba(255,255,255,.05);
+    text-align:center;
+}
+
+.mini strong{
+    display:block;
+    color:var(--gold);
+    font-size:20px;
+}
+
+.mini span{
+    font-size:11px;
+    color:#aebdcd;
+}
+
+/* STATS */
 
 .stats{
+    margin-top:-45px;
     position:relative;
-    z-index:10;
-    margin-top:-55px;
+    z-index:3;
 }
 
 .stats-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:16px;
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 20px 60px rgba(16,24,40,.13);
+    overflow:hidden;
 }
 
 .stat{
-    position:relative;
-    overflow:hidden;
-    background:white;
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:27px 15px;
+    padding:28px 18px;
     text-align:center;
-    box-shadow:var(--shadow);
+    border-left:1px solid var(--border);
 }
 
-.stat:before{
-    content:"";
-    position:absolute;
-    right:0;
-    top:0;
-    width:100%;
-    height:3px;
-    background:linear-gradient(90deg,var(--blue),var(--gold));
+.stat:last-child{
+    border-left:0;
 }
 
-.stat strong{
+.stat-number{
     display:block;
-    color:var(--blue);
-    font-size:34px;
+    font-size:35px;
     font-weight:900;
-    line-height:1.3;
+    color:var(--navy);
 }
 
-.stat span{
-    display:block;
-    margin-top:5px;
+.stat-label{
     color:var(--muted);
-    font-size:12px;
+    font-size:13px;
 }
 
-/* ================= GENERAL SECTION ================= */
+/* GENERAL */
 
 section{
     padding:100px 0;
 }
 
 .section-head{
-    max-width:700px;
     margin-bottom:48px;
 }
 
-.section-label{
-    color:var(--gold);
-    font-size:11px;
+.section-kicker{
+    color:var(--blue);
+    font-weight:800;
+    font-size:13px;
+    margin-bottom:8px;
+}
+
+.section-title{
+    font-size:34px;
+    color:var(--navy);
     font-weight:900;
-    letter-spacing:1.5px;
 }
 
-.section-head h2{
-    margin:6px 0 8px;
-    font-size:35px;
-    line-height:1.4;
-}
-
-.section-head p{
+.section-desc{
+    max-width:700px;
     color:var(--muted);
-    font-size:14px;
+    margin-top:10px;
 }
 
-/* ================= ABOUT ================= */
+/* ABOUT */
+
+.about{
+    background:#fff;
+}
 
 .about-grid{
     display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:22px;
+    grid-template-columns:1fr 1fr;
+    gap:65px;
+    align-items:start;
 }
 
-.about-card{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:35px;
-    box-shadow:var(--shadow);
-}
-
-.about-card h3{
-    color:var(--blue);
-    font-size:19px;
-    margin-bottom:12px;
-}
-
-.about-card p{
-    color:var(--muted);
-    font-size:14px;
+.about-text p{
+    color:#475467;
+    margin-bottom:18px;
 }
 
 .focus-list{
-    margin-top:20px;
     display:grid;
-    gap:11px;
+    gap:14px;
 }
 
 .focus-item{
     display:flex;
-    align-items:center;
-    gap:10px;
-    color:var(--text);
-    font-size:13px;
-    font-weight:bold;
-}
-
-.focus-item i{
-    width:9px;
-    height:9px;
-    border-radius:50%;
-    background:var(--gold);
-    flex:none;
-}
-
-/* ================= EXPERIENCE ================= */
-
-.experience{
-    background:white;
-}
-
-.timeline{
-    max-width:920px;
-    position:relative;
-    margin:auto;
-}
-
-.timeline:before{
-    content:"";
-    position:absolute;
-    right:17px;
-    top:0;
-    bottom:0;
-    width:2px;
-    background:#dce5ef;
-}
-
-.timeline-item{
-    position:relative;
-    padding-right:58px;
-    margin-bottom:28px;
-}
-
-.timeline-item:last-child{
-    margin-bottom:0;
-}
-
-.dot{
-    position:absolute;
-    right:7px;
-    top:9px;
-    width:21px;
-    height:21px;
-    border-radius:50%;
-    background:var(--blue);
-    border:5px solid #dceafa;
-    box-shadow:0 0 0 5px white;
-}
-
-.timeline-card{
-    background:var(--light);
+    gap:15px;
+    align-items:flex-start;
+    padding:19px;
     border:1px solid var(--border);
-    border-radius:20px;
-    padding:27px;
-    transition:.25s;
-}
-
-.timeline-card:hover{
-    transform:translateX(-4px);
-    box-shadow:var(--shadow);
-}
-
-.timeline-card h3{
-    font-size:18px;
-    margin-bottom:3px;
-}
-
-.company{
-    color:var(--blue);
-    font-size:13px;
-    font-weight:900;
-}
-
-.timeline-card p{
-    color:var(--muted);
-    font-size:13px;
-    margin-top:9px;
-}
-
-/* ================= SPECIALTIES ================= */
-
-.specialties{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.specialty{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:28px;
-    box-shadow:0 10px 35px rgba(6,21,43,.06);
-    transition:.25s;
-}
-
-.specialty:hover{
-    transform:translateY(-6px);
-    box-shadow:var(--shadow);
-}
-
-.specialty-icon{
-    width:48px;
-    height:48px;
     border-radius:14px;
+    transition:.25s;
+}
+
+.focus-item:hover{
+    transform:translateX(-5px);
+    box-shadow:0 10px 30px rgba(16,24,40,.07);
+}
+
+.focus-icon{
+    min-width:42px;
+    height:42px;
+    border-radius:11px;
     display:flex;
     align-items:center;
     justify-content:center;
     background:#edf5ff;
     color:var(--blue);
     font-weight:900;
-    margin-bottom:18px;
 }
 
-.specialty h3{
-    font-size:17px;
-    margin-bottom:8px;
+.focus-item strong{
+    display:block;
+    color:var(--navy);
 }
 
-.specialty p{
+.focus-item span{
     color:var(--muted);
     font-size:13px;
 }
 
-/* ================= ACHIEVEMENTS ================= */
+/* EXPERIENCE */
+
+.experience{
+    background:var(--light);
+}
+
+.timeline{
+    position:relative;
+    max-width:900px;
+}
+
+.timeline:before{
+    content:"";
+    position:absolute;
+    right:17px;
+    top:10px;
+    bottom:10px;
+    width:2px;
+    background:#d7dde5;
+}
+
+.timeline-item{
+    position:relative;
+    padding-right:58px;
+    margin-bottom:35px;
+}
+
+.timeline-dot{
+    position:absolute;
+    right:7px;
+    top:8px;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:var(--gold);
+    border:5px solid var(--light);
+    box-shadow:0 0 0 2px var(--gold);
+}
+
+.timeline-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:17px;
+    padding:27px;
+    box-shadow:0 8px 30px rgba(16,24,40,.04);
+}
+
+.timeline-card h3{
+    color:var(--navy);
+    font-size:20px;
+    margin-bottom:7px;
+}
+
+.timeline-card p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* SPECIALTIES */
+
+.specialties{
+    background:#fff;
+}
+
+.specialty-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.specialty{
+    min-height:230px;
+    padding:30px;
+    border-radius:20px;
+    color:#fff;
+    background:linear-gradient(145deg,#0b1c30,#122d49);
+    position:relative;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.specialty:nth-child(2){
+    background:linear-gradient(145deg,#12355b,#175fa4);
+}
+
+.specialty:nth-child(3){
+    background:linear-gradient(145deg,#30230e,#66501e);
+}
+
+.specialty:hover{
+    transform:translateY(-7px);
+}
+
+.specialty-number{
+    font-size:52px;
+    font-weight:900;
+    opacity:.12;
+    position:absolute;
+    left:20px;
+    bottom:-10px;
+}
+
+.specialty h3{
+    font-size:22px;
+    margin-bottom:13px;
+}
+
+.specialty p{
+    color:#d3deea;
+    font-size:14px;
+}
+
+/* ACHIEVEMENTS */
 
 .achievements{
+    background:#f8fafc;
+}
+
+.achievement-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
 .achievement{
-    background:white;
+    padding:25px;
+    background:#fff;
     border:1px solid var(--border);
-    border-radius:21px;
-    padding:28px;
-    box-shadow:var(--shadow);
-    transition:.25s;
+    border-radius:16px;
 }
 
-.achievement:hover{
-    transform:translateY(-6px);
-}
-
-.number{
-    font-size:35px;
-    color:var(--blue);
+.achievement-number{
+    font-size:32px;
     font-weight:900;
-    line-height:1.3;
+    color:var(--blue);
 }
 
 .achievement h3{
-    font-size:16px;
-    margin:7px 0;
+    margin:4px 0;
+    color:var(--navy);
+    font-size:17px;
 }
 
 .achievement p{
@@ -544,285 +546,253 @@ section{
     font-size:13px;
 }
 
-/* ================= INTERNATIONAL ================= */
-
-.international{
-    background:
-        radial-gradient(circle at 80% 20%,rgba(43,131,230,.18),transparent 30%),
-        var(--navy);
-    color:white;
-}
-
-.international .section-head p{
-    color:rgba(255,255,255,.62);
-}
-
-.international-box{
-    display:grid;
-    grid-template-columns:190px 1fr;
-    gap:40px;
-    align-items:center;
-    background:rgba(255,255,255,.055);
-    border:1px solid rgba(255,255,255,.11);
-    border-radius:27px;
-    padding:38px;
-}
+/* BITON */
 
 .biton{
-    font-size:54px;
-    font-weight:900;
-    color:var(--gold2);
+    background:var(--navy);
+    color:#fff;
 }
 
-.international-box h3{
-    font-size:20px;
-    margin-bottom:8px;
+.biton-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:60px;
+    align-items:center;
 }
 
-.international-box p{
-    color:rgba(255,255,255,.68);
+.biton-badge{
+    min-height:270px;
+    border-radius:24px;
+    border:1px solid rgba(216,168,78,.3);
+    background:linear-gradient(145deg,rgba(216,168,78,.15),rgba(25,118,210,.12));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.biton-badge strong{
+    font-size:64px;
+    color:var(--gold);
+    display:block;
+    line-height:1;
+}
+
+.biton-badge span{
+    color:#c6d3df;
     font-size:14px;
 }
 
-/* ================= EDUCATION ================= */
+.biton h2{
+    font-size:35px;
+    margin-bottom:18px;
+}
+
+.biton p{
+    color:#b8c6d4;
+    line-height:2.2;
+}
+
+.biton-tag{
+    display:inline-block;
+    margin-top:22px;
+    padding:8px 15px;
+    border-radius:20px;
+    background:rgba(216,168,78,.13);
+    color:var(--gold);
+    font-size:13px;
+}
+
+/* EDUCATION */
 
 .education{
+    background:#fff;
+}
+
+.education-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
 .edu{
-    position:relative;
-    overflow:hidden;
-    background:white;
+    padding:27px;
     border:1px solid var(--border);
-    border-radius:21px;
-    padding:29px;
-    box-shadow:var(--shadow);
+    border-radius:17px;
+    background:#fff;
+    position:relative;
 }
 
-.edu:after{
+.edu:before{
     content:"";
     position:absolute;
-    left:-30px;
-    bottom:-30px;
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    background:#edf5ff;
-}
-
-.edu small{
-    color:var(--gold);
-    font-weight:900;
-    font-size:11px;
+    top:0;
+    right:0;
+    left:0;
+    height:4px;
+    border-radius:17px 17px 0 0;
+    background:var(--blue);
 }
 
 .edu h3{
-    position:relative;
-    z-index:2;
+    margin-top:10px;
+    color:var(--navy);
     font-size:17px;
-    margin:8px 0;
 }
 
 .edu p{
-    position:relative;
-    z-index:2;
     color:var(--muted);
     font-size:13px;
+    margin-top:7px;
 }
 
-/* ================= SKILLS ================= */
+/* SKILLS */
 
 .skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
+    background:var(--light);
+}
+
+.skill-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
 }
 
 .skill{
-    padding:13px 21px;
-    background:white;
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
     border:1px solid var(--border);
-    border-radius:50px;
-    box-shadow:0 7px 25px rgba(6,21,43,.05);
-    font-size:13px;
-    font-weight:900;
-    transition:.25s;
-}
-
-.skill:hover{
-    transform:translateY(-3px);
-    border-color:#c8d9ec;
-    color:var(--blue);
-}
-
-/* ================= CLOSING PROFILE ================= */
-
-.profile{
-    padding:90px 0;
-    background:
-        radial-gradient(circle at 20% 30%,rgba(215,165,43,.12),transparent 25%),
-        linear-gradient(135deg,#09284d,#125ca8);
-    color:white;
-}
-
-.profile-content{
-    max-width:850px;
-    margin:auto;
     text-align:center;
 }
 
-.profile-content .mini{
-    color:var(--gold2);
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:1.5px;
+.skill strong{
+    display:block;
+    color:var(--navy);
+    font-size:17px;
+    margin-bottom:8px;
 }
 
-.profile-content h2{
-    font-size:36px;
-    margin:8px 0 14px;
+.skill span{
+    font-size:12px;
+    color:var(--muted);
 }
 
-.profile-content p{
-    color:rgba(255,255,255,.72);
-    font-size:15px;
+/* FINAL CTA */
+
+.final{
+    background:
+        radial-gradient(circle at 80% 30%,rgba(25,118,210,.25),transparent 30%),
+        var(--navy);
+    color:#fff;
+    text-align:center;
+    padding:90px 0;
 }
 
-/* ================= FOOTER ================= */
+.final h2{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.final p{
+    color:#b7c4d2;
+    max-width:650px;
+    margin:auto;
+}
+
+/* FOOTER */
 
 footer{
-    background:#030d1c;
-    color:white;
-    padding:38px 0;
+    background:#040b14;
+    color:#8492a2;
     text-align:center;
-}
-
-footer strong{
-    display:block;
-    font-size:16px;
-    margin-bottom:5px;
-}
-
-footer span{
-    color:#8996a8;
+    padding:25px 15px;
     font-size:12px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 
-@media(max-width:950px){
+@media(max-width:900px){
 
-    .hero{
-        padding:80px 0;
-    }
-
-    .hero-grid{
+    .hero-grid,
+    .about-grid,
+    .biton-grid{
         grid-template-columns:1fr;
-        text-align:center;
-        gap:55px;
     }
 
-    .hero-description{
+    .profile-card{
+        max-width:520px;
         margin:auto;
     }
 
-    .buttons{
-        justify-content:center;
-    }
-
-    .stats-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .about-grid{
-        grid-template-columns:1fr;
-    }
-
-    .specialties,
-    .achievements,
-    .education{
+    .specialty-grid,
+    .achievement-grid,
+    .education-grid{
         grid-template-columns:1fr 1fr;
     }
 
-    .photo-frame{
-        width:280px;
-        height:340px;
-    }
-
-    .menu{
-        display:none;
+    .skill-grid{
+        grid-template-columns:1fr 1fr;
     }
 }
 
-@media(max-width:600px){
+@media(max-width:650px){
 
-    .container{
-        width:90%;
+    .nav-inner{
+        justify-content:center;
+    }
+
+    .logo{
+        display:none;
+    }
+
+    .nav-links{
+        gap:14px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .nav-links a{
+        font-size:11px;
+    }
+
+    .hero{
+        padding-top:125px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero-title{
+        font-size:18px;
+    }
+
+    .stats{
+        margin-top:-25px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat{
+        border-bottom:1px solid var(--border);
     }
 
     section{
         padding:70px 0;
     }
 
-    .hero{
-        min-height:auto;
-        padding:65px 0 85px;
-    }
-
-    .hero h1{
-        font-size:37px;
-    }
-
-    .hero h2{
-        font-size:19px;
-    }
-
-    .hero-description{
-        font-size:14px;
-    }
-
-    .photo-frame{
-        width:245px;
-        height:300px;
-    }
-
-    .stats{
-        margin-top:-35px;
-    }
-
-    .stats-grid{
-        gap:10px;
-    }
-
-    .stat{
-        padding:20px 10px;
-    }
-
-    .stat strong{
+    .section-title{
         font-size:28px;
     }
 
-    .section-head h2{
-        font-size:28px;
-    }
-
-    .specialties,
-    .achievements,
-    .education{
+    .specialty-grid,
+    .achievement-grid,
+    .education-grid,
+    .skill-grid{
         grid-template-columns:1fr;
-    }
-
-    .international-box{
-        grid-template-columns:1fr;
-        text-align:center;
-        padding:28px;
-    }
-
-    .biton{
-        font-size:43px;
     }
 
     .timeline-item{
@@ -830,14 +800,14 @@ footer span{
     }
 
     .timeline:before{
-        right:13px;
+        right:12px;
     }
 
-    .dot{
-        right:3px;
+    .timeline-dot{
+        right:2px;
     }
 
-    .profile-content h2{
+    .final h2{
         font-size:29px;
     }
 }
@@ -847,652 +817,444 @@ footer span{
 <body>
 
 <!-- NAV -->
-<nav>
-<div class="container nav">
+<nav class="navbar">
+    <div class="container nav-inner">
+        <a href="#home" class="logo">امیرمسعود <span>عبدالهی</span></a>
 
-    <div class="logo">
-        امیرمسعود <span>عبدالهی بیدگلی</span>
+        <ul class="nav-links">
+            <li><a href="#about">درباره من</a></li>
+            <li><a href="#experience">سوابق</a></li>
+            <li><a href="#specialties">تخصص‌ها</a></li>
+            <li><a href="#achievements">دستاوردها</a></li>
+            <li><a href="#education">تحصیلات</a></li>
+            <li><a href="#skills">مهارت‌ها</a></li>
+        </ul>
     </div>
-
-    <div class="menu">
-        <a href="#about">معرفی</a>
-        <a href="#experience">سوابق</a>
-        <a href="#specialties">تخصص‌ها</a>
-        <a href="#achievements">دستاوردها</a>
-        <a href="#education">تحصیلات</a>
-        <a href="#skills">مهارت‌ها</a>
-    </div>
-
-</div>
 </nav>
 
 
 <!-- HERO -->
-<header class="hero">
+<header class="hero" id="home">
+    <div class="container hero-grid">
 
-<div class="container hero-grid">
+        <div>
+            <div class="eyebrow">پروفایل حرفه‌ای</div>
 
-    <div>
+            <h1>
+                امیرمسعود<br>
+                <span>عبدالهی بیدگلی</span>
+            </h1>
 
-        <div class="eyebrow">
-            PROFESSIONAL PROFILE
+            <div class="hero-title">
+                مدیر و متخصص تولید و تکنولوژی رنگ خودرو
+            </div>
+
+            <p class="hero-description">
+                متخصص حوزه تولید خودرو با بیش از ۱۵ سال تجربه همکاری با
+                سایپا سیتروئن، دارای تجربه در مدیریت تولید سالن رنگ،
+                ارزیابی سیستم مدیریت کارخانه و تولید کابین‌های رنگ.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#experience" class="btn btn-primary">مشاهده سوابق حرفه‌ای</a>
+                <a href="#about" class="btn btn-outline">درباره من</a>
+            </div>
         </div>
 
-        <h1>
-            امیرمسعود<br>
-            عبدالهی بیدگلی
-        </h1>
 
-        <h2>
-            مدیر و متخصص تولید و تکنولوژی رنگ خودرو
-        </h2>
-
-        <p class="hero-description">
-            متخصص حوزه تولید و تکنولوژی رنگ خودرو با بیش از
-            ۱۵ سال سابقه همکاری با سایپا سیتروئن و تجربه در
-            سرپرستی تولید سالن رنگ، ارزیابی سیستم مدیریت کارخانه
-            و تولید کابین‌های رنگ.
-        </p>
-
-        <div class="buttons">
-
-            <a href="#experience" class="btn btn-primary">
-                مشاهده سوابق
-            </a>
-
-            <a href="#achievements" class="btn btn-gold">
-                دستاوردهای حرفه‌ای
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- PHOTO PLACEHOLDER -->
-    <div class="photo-area">
-
-        <div class="photo-frame">
+        <div class="profile-card">
 
             <div class="photo">
+                <div class="photo-placeholder">ا</div>
+                <div class="photo-label">
+                    محل قرارگیری عکس حرفه‌ای
+                </div>
+            </div>
 
-                <!--
-                عکس واقعی را بعداً اینجا قرار می‌دهیم:
-
-                <img
-                    src="profile.jpg"
-                    alt="امیرمسعود عبدالهی بیدگلی"
-                    style="width:100%;height:100%;object-fit:cover;"
-                >
-                -->
-
-                <div class="photo-placeholder">
-                    ا
+            <div class="profile-mini">
+                <div class="mini">
+                    <strong>15+</strong>
+                    <span>سال تجربه همکاری</span>
                 </div>
 
+                <div class="mini">
+                    <strong>707</strong>
+                    <span>ساعت آموزش</span>
+                </div>
             </div>
 
         </div>
 
-        <div class="photo-caption">
-            متولد کاشان
-        </div>
-
     </div>
-
-</div>
-
 </header>
 
 
 <!-- STATS -->
 <div class="stats">
+    <div class="container">
+        <div class="stats-grid">
 
-<div class="container stats-grid">
+            <div class="stat">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">سال همکاری با سایپا سیتروئن</span>
+            </div>
 
-    <div class="stat">
-        <strong>۱۵+</strong>
-        <span>سال سابقه همکاری</span>
+            <div class="stat">
+                <span class="stat-number">707</span>
+                <span class="stat-label">ساعت آموزش</span>
+            </div>
+
+            <div class="stat">
+                <span class="stat-number">350+</span>
+                <span class="stat-label">پیشنهاد ارائه‌شده</span>
+            </div>
+
+            <div class="stat">
+                <span class="stat-number">100</span>
+                <span class="stat-label">پیشنهاد اجراشده</span>
+            </div>
+
+        </div>
     </div>
-
-    <div class="stat">
-        <strong>۷۰۷</strong>
-        <span>ساعت آموزش</span>
-    </div>
-
-    <div class="stat">
-        <strong>۳۵۰+</strong>
-        <span>پیشنهاد ارائه‌شده</span>
-    </div>
-
-    <div class="stat">
-        <strong>۱۰۰</strong>
-        <span>پیشنهاد اجراشده</span>
-    </div>
-
-</div>
-
 </div>
 
 
 <!-- ABOUT -->
-<section id="about">
+<section class="about" id="about">
+    <div class="container">
 
-<div class="container">
-
-    <div class="section-head">
-        <div class="section-label">ABOUT</div>
-        <h2>پروفایل حرفه‌ای</h2>
-        <p>
-            تجربه، تخصص و مسیر حرفه‌ای در صنعت خودرو
-        </p>
-    </div>
-
-
-    <div class="about-grid">
-
-        <div class="about-card">
-
-            <h3>تجربه حرفه‌ای</h3>
-
-            <p>
-                بیش از ۱۵ سال سابقه همکاری با سایپا سیتروئن
-                در حوزه تولید و تکنولوژی رنگ خودرو، همراه با
-                تجربه در مسئولیت‌های اجرایی و کارشناسی کارخانه.
+        <div class="section-head">
+            <div class="section-kicker">ABOUT</div>
+            <h2 class="section-title">درباره حرفه‌ای من</h2>
+            <p class="section-desc">
+                ترکیبی از تجربه عملی تولید، تکنولوژی رنگ، ارزیابی سیستم‌های مدیریتی
+                و آموزش تخصصی در صنعت خودرو.
             </p>
-
         </div>
 
+        <div class="about-grid">
 
-        <div class="about-card">
+            <div class="about-text">
+                <p>
+                    فعالیت حرفه‌ای من بیش از ۱۵ سال با حوزه صنعت خودرو و
+                    به‌طور مشخص سایپا سیتروئن گره خورده است.
+                </p>
 
-            <h3>حوزه‌های تمرکز</h3>
+                <p>
+                    در این مسیر در بخش‌های مختلف تولید و ارزیابی سیستم مدیریت
+                    کارخانه فعالیت داشته‌ام و تجربه عملی در محیط تولید به دست آورده‌ام.
+                </p>
+
+                <p>
+                    یکی از بخش‌های مهم مسیر حرفه‌ای من، آموزش تخصصی یک‌ماهه
+                    BITON در زمینه رنگ سقف دو رنگ خودرو در پژو سیتروئن فرانسه بوده است.
+                </p>
+            </div>
 
             <div class="focus-list">
 
                 <div class="focus-item">
-                    <i></i>
-                    تولید و فرآیندهای سالن رنگ
+                    <div class="focus-icon">01</div>
+                    <div>
+                        <strong>تولید خودرو</strong>
+                        <span>تجربه عملی در محیط تولید و مدیریت تولید</span>
+                    </div>
                 </div>
 
                 <div class="focus-item">
-                    <i></i>
-                    تکنولوژی رنگ خودرو
+                    <div class="focus-icon">02</div>
+                    <div>
+                        <strong>تکنولوژی رنگ</strong>
+                        <span>تجربه تخصصی در فرآیندهای رنگ خودرو</span>
+                    </div>
                 </div>
 
                 <div class="focus-item">
-                    <i></i>
-                    ارزیابی سیستم مدیریت کارخانه
-                </div>
-
-                <div class="focus-item">
-                    <i></i>
-                    بهبود و نوآوری
+                    <div class="focus-icon">03</div>
+                    <div>
+                        <strong>سیستم مدیریت کارخانه</strong>
+                        <span>تجربه ارزیابی سیستم مدیریت کارخانه</span>
+                    </div>
                 </div>
 
             </div>
 
         </div>
-
     </div>
-
-</div>
-
 </section>
 
 
 <!-- EXPERIENCE -->
 <section class="experience" id="experience">
+    <div class="container">
 
-<div class="container">
+        <div class="section-head">
+            <div class="section-kicker">EXPERIENCE</div>
+            <h2 class="section-title">سوابق حرفه‌ای</h2>
+            <p class="section-desc">
+                بخشی از مسئولیت‌ها و نقش‌های حرفه‌ای در مسیر فعالیت در صنعت خودرو.
+            </p>
+        </div>
 
-    <div class="section-head">
-        <div class="section-label">CAREER</div>
-        <h2>سوابق حرفه‌ای</h2>
-        <p>
-            تجربه در حوزه تولید، مدیریت و ارزیابی سیستم کارخانه
-        </p>
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <h3>سرپرست تولید سالن رنگ</h3>
+                    <p>
+                        مسئولیت و فعالیت در حوزه تولید سالن رنگ و فرآیندهای مرتبط
+                        با تولید خودرو.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <h3>کارشناس ارزیابی سیستم مدیریت کارخانه</h3>
+                    <p>
+                        فعالیت در زمینه ارزیابی سیستم مدیریت کارخانه و
+                        بررسی فرآیندهای مدیریتی و عملیاتی.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <h3>مسئول / سرپرست تولید کابین‌های رنگ</h3>
+                    <p>
+                        فعالیت و مسئولیت در حوزه تولید کابین‌های رنگ
+                        در محیط صنعتی خودرو.
+                    </p>
+                </div>
+            </div>
+
+        </div>
     </div>
-
-
-    <div class="timeline">
-
-        <div class="timeline-item">
-
-            <div class="dot"></div>
-
-            <div class="timeline-card">
-
-                <h3>سرپرست تولید سالن رنگ</h3>
-
-                <div class="company">
-                    سایپا سیتروئن
-                </div>
-
-                <p>
-                    فعالیت در حوزه سرپرستی و مدیریت فرآیندهای
-                    تولید در سالن رنگ خودرو.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <div class="dot"></div>
-
-            <div class="timeline-card">
-
-                <h3>کارشناس ارزیابی سیستم مدیریت کارخانه</h3>
-
-                <div class="company">
-                    سایپا سیتروئن
-                </div>
-
-                <p>
-                    فعالیت در حوزه ارزیابی سیستم مدیریت کارخانه
-                    و بررسی فرآیندهای مدیریتی و تولیدی.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <div class="dot"></div>
-
-            <div class="timeline-card">
-
-                <h3>مسئول / سرپرست تولید کابین‌های رنگ</h3>
-
-                <div class="company">
-                    سایپا سیتروئن
-                </div>
-
-                <p>
-                    مسئولیت و سرپرستی فرآیند تولید کابین‌های
-                    رنگ در محیط صنعتی خودرو.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
 </section>
 
 
 <!-- SPECIALTIES -->
-<section id="specialties">
+<section class="specialties" id="specialties">
+    <div class="container">
 
-<div class="container">
+        <div class="section-head">
+            <div class="section-kicker">EXPERTISE</div>
+            <h2 class="section-title">حوزه‌های تخصصی</h2>
+        </div>
 
-    <div class="section-head">
-        <div class="section-label">EXPERTISE</div>
-        <h2>حوزه‌های تخصصی</h2>
-        <p>
-            حوزه‌هایی که بخش اصلی تجربه حرفه‌ای را تشکیل می‌دهند
-        </p>
+        <div class="specialty-grid">
+
+            <div class="specialty">
+                <div class="specialty-number">01</div>
+                <h3>تولید خودرو</h3>
+                <p>
+                    تجربه فعالیت حرفه‌ای در محیط تولید و مدیریت
+                    فرآیندهای تولید خودرو.
+                </p>
+            </div>
+
+            <div class="specialty">
+                <div class="specialty-number">02</div>
+                <h3>تکنولوژی رنگ</h3>
+                <p>
+                    تجربه در حوزه تکنولوژی رنگ خودرو و آموزش تخصصی
+                    رنگ سقف دو رنگ BITON.
+                </p>
+            </div>
+
+            <div class="specialty">
+                <div class="specialty-number">03</div>
+                <h3>ارزیابی و مدیریت</h3>
+                <p>
+                    تجربه در ارزیابی سیستم مدیریت کارخانه و فعالیت‌های
+                    مدیریتی و عملیاتی تولید.
+                </p>
+            </div>
+
+        </div>
     </div>
-
-
-    <div class="specialties">
-
-        <div class="specialty">
-
-            <div class="specialty-icon">
-                01
-            </div>
-
-            <h3>تولید خودرو</h3>
-
-            <p>
-                تجربه حرفه‌ای در محیط تولید صنعتی خودرو
-                و فعالیت در فرآیندهای تولید.
-            </p>
-
-        </div>
-
-
-        <div class="specialty">
-
-            <div class="specialty-icon">
-                02
-            </div>
-
-            <h3>تکنولوژی رنگ</h3>
-
-            <p>
-                تمرکز حرفه‌ای بر فرآیندها و تکنولوژی رنگ
-                در صنعت خودرو.
-            </p>
-
-        </div>
-
-
-        <div class="specialty">
-
-            <div class="specialty-icon">
-                03
-            </div>
-
-            <h3>مدیریت و ارزیابی</h3>
-
-            <p>
-                تجربه در ارزیابی سیستم مدیریت کارخانه
-                و فرآیندهای مدیریتی و تولیدی.
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
-
 </section>
 
 
 <!-- ACHIEVEMENTS -->
-<section id="achievements">
+<section class="achievements" id="achievements">
+    <div class="container">
 
-<div class="container">
+        <div class="section-head">
+            <div class="section-kicker">ACHIEVEMENTS</div>
+            <h2 class="section-title">دستاوردها و افتخارات</h2>
+        </div>
 
-    <div class="section-head">
-        <div class="section-label">ACHIEVEMENTS</div>
-        <h2>دستاوردهای حرفه‌ای</h2>
-        <p>
-            شاخص‌های ثبت‌شده در مسیر حرفه‌ای
-        </p>
+        <div class="achievement-grid">
+
+            <div class="achievement">
+                <div class="achievement-number">350+</div>
+                <h3>پیشنهاد ثبت‌شده</h3>
+                <p>ارائه بیش از ۳۵۰ پیشنهاد طی دوران همکاری.</p>
+            </div>
+
+            <div class="achievement">
+                <div class="achievement-number">100</div>
+                <h3>پیشنهاد اجراشده</h3>
+                <p>بیش از ۱۰۰ پیشنهاد ارائه‌شده به مرحله اجرا رسیده است.</p>
+            </div>
+
+            <div class="achievement">
+                <div class="achievement-number">1399</div>
+                <h3>برگزیده سیستم پیشنهادها</h3>
+                <p>انتخاب به‌عنوان یکی از برترین افراد سیستم پیشنهادها در سال ۱۳۹۹.</p>
+            </div>
+
+            <div class="achievement">
+                <div class="achievement-number">707</div>
+                <h3>ساعت آموزش</h3>
+                <p>گذراندن بیش از ۷۰۷ ساعت دوره‌های آموزشی.</p>
+            </div>
+
+            <div class="achievement">
+                <div class="achievement-number">15+</div>
+                <h3>سال تجربه همکاری</h3>
+                <p>بیش از ۱۵ سال همکاری با سایپا سیتروئن.</p>
+            </div>
+
+            <div class="achievement">
+                <div class="achievement-number">FR</div>
+                <h3>آموزش تخصصی فرانسه</h3>
+                <p>گذراندن دوره تخصصی یک‌ماهه BITON در پژو سیتروئن فرانسه.</p>
+            </div>
+
+        </div>
     </div>
-
-
-    <div class="achievements">
-
-        <div class="achievement">
-            <div class="number">۱۵+</div>
-            <h3>سال تجربه</h3>
-            <p>
-                بیش از ۱۵ سال همکاری با سایپا سیتروئن.
-            </p>
-        </div>
-
-
-        <div class="achievement">
-            <div class="number">۳۵۰+</div>
-            <h3>پیشنهاد</h3>
-            <p>
-                بیش از ۳۵۰ پیشنهاد طی دوران همکاری با سایپا.
-            </p>
-        </div>
-
-
-        <div class="achievement">
-            <div class="number">۱۰۰</div>
-            <h3>پیشنهاد اجراشده</h3>
-            <p>
-                اجرای ۱۰۰ پیشنهاد در مسیر بهبود و نوآوری.
-            </p>
-        </div>
-
-
-        <div class="achievement">
-            <div class="number">۱۳۹۹</div>
-            <h3>برگزیده نظام پیشنهادات</h3>
-            <p>
-                انتخاب به‌عنوان یکی از برترین‌های نظام پیشنهادات
-                در سال ۱۳۹۹.
-            </p>
-        </div>
-
-
-        <div class="achievement">
-            <div class="number">۷۰۷</div>
-            <h3>ساعت آموزش</h3>
-            <p>
-                مجموع ۷۰۷ ساعت آموزش تخصصی و حرفه‌ای.
-            </p>
-        </div>
-
-
-        <div class="achievement">
-            <div class="number">BITON</div>
-            <h3>تجربه تخصصی بین‌المللی</h3>
-            <p>
-                گذراندن دوره یک‌ماهه تخصصی رنگ BITON
-                سقف دورنگ در پژو سیتروئن فرانسه.
-            </p>
-        </div>
-
-    </div>
-
-</div>
-
 </section>
 
 
-<!-- INTERNATIONAL -->
-<section class="international">
+<!-- BITON -->
+<section class="biton">
+    <div class="container biton-grid">
 
-<div class="container">
-
-    <div class="section-head">
-
-        <div class="section-label">
-            INTERNATIONAL EXPERIENCE
-        </div>
-
-        <h2>
-            آموزش تخصصی در فرانسه
-        </h2>
-
-        <p>
-            تجربه تخصصی در تکنولوژی رنگ خودرو
-        </p>
-
-    </div>
-
-
-    <div class="international-box">
-
-        <div class="biton">
-            BITON
+        <div class="biton-badge">
+            <div>
+                <strong>BITON</strong>
+                <span>Two-Tone Roof Paint</span>
+            </div>
         </div>
 
         <div>
+            <div class="section-kicker">INTERNATIONAL TRAINING</div>
 
-            <h3>
-                دوره تخصصی رنگ سقف دورنگ
-            </h3>
+            <h2>آموزش تخصصی در فرانسه</h2>
 
             <p>
-                گذراندن دوره یک‌ماهه تخصصی رنگ BITON
-                سقف دورنگ در پژو سیتروئن فرانسه.
+                گذراندن یک دوره تخصصی یک‌ماهه در زمینه
+                رنگ سقف دو رنگ خودرو (BITON) در
+                پژو سیتروئن فرانسه، یکی از بخش‌های شاخص
+                مسیر آموزشی و حرفه‌ای.
             </p>
 
+            <span class="biton-tag">
+                Peugeot Citroën France
+            </span>
         </div>
 
     </div>
-
-</div>
-
 </section>
 
 
 <!-- EDUCATION -->
-<section id="education">
+<section class="education" id="education">
+    <div class="container">
 
-<div class="container">
-
-    <div class="section-head">
-
-        <div class="section-label">
-            EDUCATION
+        <div class="section-head">
+            <div class="section-kicker">EDUCATION</div>
+            <h2 class="section-title">تحصیلات</h2>
         </div>
 
-        <h2>
-            تحصیلات
-        </h2>
+        <div class="education-grid">
 
-        <p>
-            مسیر تحصیلی
-        </p>
+            <div class="edu">
+                <h3>دیپلم الکتروتکنیک</h3>
+                <p>رشته الکتروتکنیک</p>
+            </div>
 
+            <div class="edu">
+                <h3>کاردانی تعمیرات سخت‌افزار کامپیوتر</h3>
+                <p>مقطع کاردانی</p>
+            </div>
+
+            <div class="edu">
+                <h3>کارشناسی مهندسی تکنولوژی ارتباطات و فناوری اطلاعات</h3>
+                <p>ICT</p>
+            </div>
+
+        </div>
     </div>
-
-
-    <div class="education">
-
-        <div class="edu">
-
-            <small>دیپلم</small>
-
-            <h3>
-                الکتروتکنیک
-            </h3>
-
-            <p>
-                دیپلم الکتروتکنیک
-            </p>
-
-        </div>
-
-
-        <div class="edu">
-
-            <small>کاردانی</small>
-
-            <h3>
-                تعمیرات سخت‌افزار کامپیوتر
-            </h3>
-
-            <p>
-                کاردانی تعمیرات سخت‌افزار کامپیوتر
-            </p>
-
-        </div>
-
-
-        <div class="edu">
-
-            <small>کارشناسی</small>
-
-            <h3>
-                مهندسی تکنولوژی ارتباطات و فناوری اطلاعات
-            </h3>
-
-            <p>
-                مهندسی تکنولوژی ارتباطات و فناوری اطلاعات (ICT)
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
-
 </section>
 
 
 <!-- SKILLS -->
-<section id="skills">
+<section class="skills" id="skills">
+    <div class="container">
 
-<div class="container">
-
-    <div class="section-head">
-
-        <div class="section-label">
-            SOFTWARE
+        <div class="section-head">
+            <div class="section-kicker">SKILLS</div>
+            <h2 class="section-title">مهارت‌های نرم‌افزاری</h2>
         </div>
 
-        <h2>
-            مهارت‌های نرم‌افزاری
-        </h2>
+        <div class="skill-grid">
 
-        <p>
-            ابزارهای نرم‌افزاری مورد استفاده
-        </p>
+            <div class="skill">
+                <strong>Microsoft Word</strong>
+                <span>کار با نرم‌افزارهای اداری</span>
+            </div>
 
+            <div class="skill">
+                <strong>Microsoft Excel</strong>
+                <span>کار با صفحات گسترده</span>
+            </div>
+
+            <div class="skill">
+                <strong>PowerPoint</strong>
+                <span>تهیه ارائه و گزارش</span>
+            </div>
+
+            <div class="skill">
+                <strong>Internet</strong>
+                <span>مهارت‌های عمومی اینترنت</span>
+            </div>
+
+        </div>
     </div>
-
-
-    <div class="skills">
-
-        <div class="skill">
-            Microsoft Word
-        </div>
-
-        <div class="skill">
-            Microsoft Excel
-        </div>
-
-        <div class="skill">
-            Microsoft PowerPoint
-        </div>
-
-        <div class="skill">
-            Internet
-        </div>
-
-    </div>
-
-</div>
-
 </section>
 
 
-<!-- CLOSING -->
-<section class="profile">
+<!-- FINAL -->
+<section class="final">
+    <div class="container">
 
-<div class="container profile-content">
+        <div class="section-kicker">PROFESSIONAL PROFILE</div>
 
-    <div class="mini">
-        PROFESSIONAL PROFILE
+        <h2>تجربه، تولید و تکنولوژی</h2>
+
+        <p>
+            بیش از ۱۵ سال تجربه در صنعت خودرو،
+            همراه با آموزش تخصصی و فعالیت در حوزه تولید،
+            تکنولوژی رنگ و ارزیابی سیستم مدیریت کارخانه.
+        </p>
+
     </div>
-
-    <h2>
-        تجربه، تخصص و تعهد
-    </h2>
-
-    <p>
-        بیش از ۱۵ سال تجربه در محیط صنعتی خودرو،
-        با تمرکز بر تولید، تکنولوژی رنگ، مدیریت فرآیند
-        و بهبود مستمر.
-    </p>
-
-</div>
-
 </section>
 
 
 <!-- FOOTER -->
 <footer>
-
-<div class="container">
-
-    <strong>
-        امیرمسعود عبدالهی بیدگلی
-    </strong>
-
-    <span>
-        مدیر و متخصص تولید و تکنولوژی رنگ خودرو
-    </span>
-
-    <br>
-
-    <span>
-        © ۱۴۰۵
-    </span>
-
-</div>
-
+    © 2026 — امیرمسعود عبدالهی بیدگلی
 </footer>
 
 </body>
-</html>
+    </html>
