@@ -1,0 +1,14 @@
+{
+  "name": "رزومه امیرمسعود عبدالهی بیدگلی",
+  "short_name": "رزومه امیرمسعود",
+  "description": "رزومه حرفه‌ای امیرمسعود عبدالهی بیدگلی، مدیر و متخصص تولید و تکنولوژی رنگ خودرو",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "icons": []
+}
