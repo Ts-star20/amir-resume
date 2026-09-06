@@ -6,9 +6,10 @@
 
 <title>امیرمسعود عبدالهی بیدگلی | مدیر و متخصص تولید و تکنولوژی رنگ خودرو</title>
 
-<meta name="description" content="رزومه حرفه‌ای امیرمسعود عبدالهی بیدگلی؛ مدیر و متخصص تولید و تکنولوژی رنگ خودرو با بیش از ۱۵ سال همکاری با سایپا سیتروئن.">
+<meta name="description" content="رزومه حرفه‌ای امیرمسعود عبدالهی بیدگلی؛ مدیر و متخصص تولید و تکنولوژی رنگ خودرو با بیش از ۱۵ سال همکاری با سایپا سیتروئن، ۷۰۷ ساعت آموزش و دوره تخصصی BITON در فرانسه.">
 <meta name="author" content="امیرمسعود عبدالهی بیدگلی">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="keywords" content="امیرمسعود عبدالهی بیدگلی, امیرمسعود عبدالهی, رزومه, تولید خودرو, تکنولوژی رنگ خودرو, رنگ خودرو, سایپا سیتروئن, BITON, Peugeot Citroën, کاشان">
 
 <link rel="canonical" href="https://ts-star20.github.io/amir-resume/">
 
@@ -20,6 +21,48 @@
 <link rel="apple-touch-icon" href="./icon-192.png">
 
 <meta name="theme-color" content="#07111f">
+
+<!-- Open Graph -->
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="امیرمسعود عبدالهی بیدگلی | مدیر و متخصص تولید و تکنولوژی رنگ خودرو">
+<meta property="og:description" content="رزومه حرفه‌ای امیرمسعود عبدالهی بیدگلی با بیش از ۱۵ سال تجربه در تولید و تکنولوژی رنگ خودرو.">
+<meta property="og:url" content="https://ts-star20.github.io/amir-resume/">
+<meta property="og:site_name" content="رزومه امیرمسعود عبدالهی بیدگلی">
+<meta property="og:locale" content="fa_IR">
+<meta property="og:locale:alternate" content="en_US">
+
+<!-- Twitter / X -->
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="امیرمسعود عبدالهی بیدگلی | متخصص تولید و تکنولوژی رنگ خودرو">
+<meta name="twitter:description" content="رزومه حرفه‌ای امیرمسعود عبدالهی بیدگلی">
+
+<!-- Structured Data -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "امیرمسعود عبدالهی بیدگلی",
+  "jobTitle": "مدیر و متخصص تولید و تکنولوژی رنگ خودرو",
+  "description": "متخصص تولید و تکنولوژی رنگ خودرو با بیش از ۱۵ سال همکاری با سایپا سیتروئن.",
+  "email": "mailto:milad.marshal.63@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "کاشان",
+    "addressCountry": "IR"
+  },
+  "knowsAbout": [
+    "تولید خودرو",
+    "تکنولوژی رنگ خودرو",
+    "تولید سالن رنگ",
+    "تولید کابین‌های رنگ",
+    "ارزیابی سیستم مدیریت کارخانه",
+    "رنگ‌آمیزی سقف دو رنگ BITON"
+  ]
+}
+</script>
 
 <style>
 :root{
@@ -1460,68 +1503,7 @@ topBtn.addEventListener(
     }
 );
 
-/* Active navigation */
-
-const sections =
-    document.querySelectorAll("main section[id]");
-
-const navItems =
-    document.querySelectorAll(
-        "#navLinks a"
-    );
-
-window.addEventListener(
-    "scroll",
-    () => {
-
-        let current = "";
-
-        sections.forEach(section => {
-
-            const top =
-                section.offsetTop - 150;
-
-            if(window.scrollY >= top){
-
-                current =
-                    section.getAttribute("id");
-
-            }
-
-        });
-
-        navItems.forEach(item => {
-
-            item.classList.toggle(
-                "active",
-                item.getAttribute("href") ===
-                "#" + current
-            );
-
-        });
-
-    },
-    {passive:true}
-);
-
-/* Service Worker */
-
-if("serviceWorker" in navigator){
-
-    window.addEventListener(
-        "load",
-        () => {
-
-            navigator.serviceWorker
-                .register("./sw.js")
-                .catch(() => {});
-
-        }
-    );
-
-}
-
 </script>
 
 </body>
-   </html>
+    </html>
