@@ -25,8 +25,6 @@
 
 <meta name="theme-color" content="#07111f">
 
-<!-- Open Graph -->
-
 <meta property="og:type" content="profile">
 <meta property="og:title" content="امیرمسعود عبدالهی بیدگلی | مدیر و متخصص تولید و تکنولوژی رنگ خودرو">
 <meta property="og:description" content="رزومه حرفه‌ای امیرمسعود عبدالهی بیدگلی با بیش از ۱۵ سال همکاری با سایپا سیتروئن، ۷۰۷ ساعت آموزش و دوره تخصصی BITON در فرانسه.">
@@ -35,13 +33,9 @@
 <meta property="og:locale" content="fa_IR">
 <meta property="og:locale:alternate" content="en_US">
 
-<!-- Twitter / X -->
-
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="امیرمسعود عبدالهی بیدگلی | متخصص تولید و تکنولوژی رنگ خودرو">
 <meta name="twitter:description" content="رزومه حرفه‌ای امیرمسعود عبدالهی بیدگلی؛ متخصص تولید و تکنولوژی رنگ خودرو.">
-
-<!-- Structured Data: Person -->
 
 <script type="application/ld+json">
 {
@@ -73,8 +67,6 @@
 }
 </script>
 
-<!-- Structured Data: WebSite -->
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -89,8 +81,6 @@
   }
 }
 </script>
-
-<!-- Structured Data: ProfilePage -->
 
 <script type="application/ld+json">
 {
@@ -108,6 +98,10 @@
 </script>
 
 <style>
+
+/* ==================================================
+   VARIABLES
+   ================================================== */
 
 :root{
     --bg:#07111f;
@@ -165,6 +159,10 @@ body.light{
     background:#f4f7fb;
 }
 
+body.menu-open{
+    overflow:hidden;
+}
+
 a{
     color:inherit;
 }
@@ -175,17 +173,26 @@ textarea{
     font:inherit;
 }
 
+button{
+    -webkit-tap-highlight-color:transparent;
+}
+
 .container{
     width:min(1120px,92%);
     margin:auto;
 }
 
-/* Accessibility */
+
+/* ==================================================
+   ACCESSIBILITY
+   ================================================== */
 
 .skip-link{
     position:absolute;
+
     top:-60px;
     right:15px;
+
     z-index:1000;
 
     padding:9px 15px;
@@ -194,6 +201,7 @@ textarea{
     color:#111;
 
     border-radius:8px;
+
     font-weight:bold;
 }
 
@@ -201,7 +209,15 @@ textarea{
     top:15px;
 }
 
-/* Navigation */
+:focus-visible{
+    outline:3px solid var(--gold);
+    outline-offset:4px;
+}
+
+
+/* ==================================================
+   NAVIGATION
+   ================================================== */
 
 nav{
     position:fixed;
@@ -215,6 +231,8 @@ nav{
     background:rgba(7,17,31,.88);
 
     backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
 
     border-bottom:1px solid var(--line);
 }
@@ -242,6 +260,12 @@ body.light nav{
     font-weight:900;
 
     white-space:nowrap;
+
+    transition:.2s;
+}
+
+.brand:hover{
+    opacity:.85;
 }
 
 .nav-links{
@@ -259,7 +283,9 @@ body.light nav{
 
     font-size:.92rem;
 
-    transition:.2s;
+    transition:
+        color .2s ease,
+        transform .2s ease;
 }
 
 .nav-links a:hover,
@@ -289,6 +315,8 @@ body.light nav{
 
     align-items:center;
     justify-content:center;
+
+    gap:9px;
 
     border:1px solid rgba(255,255,255,.12);
 
@@ -321,6 +349,17 @@ body.light nav{
         background .22s ease;
 }
 
+.icon-btn svg,
+.btn svg,
+.menu-btn svg{
+    width:19px;
+    height:19px;
+
+    flex:none;
+
+    stroke:currentColor;
+}
+
 .icon-btn:hover,
 .menu-btn:hover,
 .btn:hover{
@@ -338,9 +377,6 @@ body.light nav{
 .btn:active{
     transform:translateY(0);
 }
-
-
-/* Main Gold Button */
 
 .btn.primary{
     background:
@@ -373,7 +409,9 @@ body.light nav{
 }
 
 
-/* Hero Buttons */
+/* ==================================================
+   HERO BUTTONS
+   ================================================== */
 
 .hero-buttons{
     display:flex;
@@ -388,77 +426,88 @@ body.light nav{
 .hero-buttons .btn{
     min-height:58px;
 
-    padding:
-        13px 27px;
+    padding:13px 25px;
 
     border-radius:16px;
 
     font-size:1rem;
 }
 
-
-/* Mobile Buttons */
-
-@media(max-width:800px){
-
-    .hero-buttons{
-        display:grid;
-
-        grid-template-columns:1fr 1fr;
-
-        gap:12px;
-
-        width:100%;
-    }
-
-    .hero-buttons .btn{
-        width:100%;
-
-        min-height:60px;
-
-        padding:
-            13px 15px;
-
-        font-size:.95rem;
-
-        text-align:center;
-    }
-}
-
-@media(max-width:430px){
-
-    .hero-buttons{
-        grid-template-columns:1fr 1fr;
-
-        gap:10px;
-    }
-
-    .hero-buttons .btn{
-        min-height:58px;
-
-        font-size:.9rem;
-
-        padding:
-            10px 8px;
-    }
+.hero-buttons .btn svg{
+    width:18px;
+    height:18px;
 }
 
 
-/* Mobile menu button */
+/* ==================================================
+   MOBILE MENU BUTTON
+   ================================================== */
 
 .menu-btn{
     display:none;
+
+    width:48px;
+
+    padding:10px;
 }
 
-@media(max-width:800px){
+.menu-icon{
+    position:relative;
 
-    .menu-btn{
-        display:inline-flex;
-    }
+    width:22px;
+    height:20px;
+}
+
+.menu-icon span{
+    position:absolute;
+
+    right:0;
+
+    width:22px;
+    height:2px;
+
+    border-radius:4px;
+
+    background:currentColor;
+
+    transition:
+        transform .25s ease,
+        opacity .2s ease,
+        top .25s ease;
+}
+
+.menu-icon span:nth-child(1){
+    top:2px;
+}
+
+.menu-icon span:nth-child(2){
+    top:9px;
+}
+
+.menu-icon span:nth-child(3){
+    top:16px;
+}
+
+.menu-btn.active .menu-icon span:nth-child(1){
+    top:9px;
+
+    transform:rotate(45deg);
+}
+
+.menu-btn.active .menu-icon span:nth-child(2){
+    opacity:0;
+}
+
+.menu-btn.active .menu-icon span:nth-child(3){
+    top:9px;
+
+    transform:rotate(-45deg);
 }
 
 
-/* Hero */
+/* ==================================================
+   HERO
+   ================================================== */
 
 header{
     padding:145px 0 75px;
@@ -478,6 +527,8 @@ header{
     color:var(--gold);
 
     font-weight:800;
+
+    letter-spacing:.2px;
 }
 
 .hero h1{
@@ -505,7 +556,9 @@ header{
 }
 
 
-/* Profile photo */
+/* ==================================================
+   PROFILE PHOTO
+   ================================================== */
 
 .profile-photo{
     width:100%;
@@ -558,7 +611,9 @@ header{
 }
 
 
-/* Stats */
+/* ==================================================
+   STATS
+   ================================================== */
 
 .stats{
     display:grid;
@@ -578,6 +633,17 @@ header{
     border-radius:18px;
 
     text-align:center;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease;
+}
+
+.stat:hover{
+    transform:translateY(-3px);
+
+    border-color:
+        rgba(228,184,77,.35);
 }
 
 .stat strong{
@@ -589,7 +655,9 @@ header{
 }
 
 
-/* Sections */
+/* ==================================================
+   SECTIONS
+   ================================================== */
 
 section{
     padding:70px 0;
@@ -642,7 +710,9 @@ section{
 }
 
 
-/* Timeline */
+/* ==================================================
+   TIMELINE
+   ================================================== */
 
 .timeline{
     position:relative;
@@ -688,7 +758,9 @@ body.light .timeline-item::before{
 }
 
 
-/* Pills */
+/* ==================================================
+   PILLS
+   ================================================== */
 
 .pills{
     display:flex;
@@ -706,10 +778,23 @@ body.light .timeline-item::before{
     background:var(--card);
 
     border-radius:999px;
+
+    transition:
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+.pill:hover{
+    border-color:
+        rgba(228,184,77,.4);
+
+    transform:translateY(-2px);
 }
 
 
-/* Featured */
+/* ==================================================
+   FEATURE
+   ================================================== */
 
 .feature{
     background:
@@ -731,7 +816,9 @@ body.light .timeline-item::before{
 }
 
 
-/* Contact */
+/* ==================================================
+   CONTACT
+   ================================================== */
 
 .contact-grid{
     display:grid;
@@ -749,6 +836,8 @@ body.light .timeline-item::before{
 
 .contact-box a{
     color:var(--blue);
+
+    overflow-wrap:anywhere;
 }
 
 .email-display{
@@ -793,11 +882,18 @@ textarea{
     color:var(--text);
 
     outline:none;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
 }
 
 input:focus,
 textarea:focus{
     border-color:var(--gold);
+
+    box-shadow:
+        0 0 0 3px rgba(228,184,77,.10);
 }
 
 textarea{
@@ -807,7 +903,9 @@ textarea{
 }
 
 
-/* Footer */
+/* ==================================================
+   FOOTER
+   ================================================== */
 
 footer{
     border-top:1px solid var(--line);
@@ -820,7 +918,9 @@ footer{
 }
 
 
-/* Back to top */
+/* ==================================================
+   BACK TO TOP
+   ================================================== */
 
 .top-btn{
     position:fixed;
@@ -831,17 +931,25 @@ footer{
     display:none;
 
     z-index:50;
+
+    width:50px;
+
+    padding:10px;
 }
 
 
-/* Reveal */
+/* ==================================================
+   REVEAL
+   ================================================== */
 
 .reveal{
     opacity:0;
 
     transform:translateY(18px);
 
-    transition:.7s ease;
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
 }
 
 .reveal.show{
@@ -851,33 +959,86 @@ footer{
 }
 
 
-/* Mobile */
+/* ==================================================
+   MOBILE
+   ================================================== */
 
 @media(max-width:800px){
 
-    .nav-links{
-        display:none;
+    .nav-inner{
+        min-height:64px;
+    }
 
+    .menu-btn{
+        display:inline-flex;
+    }
+
+    .nav-links{
         position:absolute;
 
-        top:68px;
+        top:64px;
 
         right:0;
         left:0;
 
-        background:var(--card);
-
-        padding:15px 5%;
+        display:flex;
 
         flex-direction:column;
 
         align-items:stretch;
 
+        gap:4px;
+
+        padding:12px 5% 16px;
+
+        background:
+            rgba(7,17,31,.98);
+
         border-bottom:1px solid var(--line);
+
+        box-shadow:
+            0 18px 35px rgba(0,0,0,.20);
+
+        opacity:0;
+
+        visibility:hidden;
+
+        pointer-events:none;
+
+        transform:
+            translateY(-12px);
+
+        transition:
+            opacity .25s ease,
+            transform .25s ease,
+            visibility .25s ease;
+    }
+
+    body.light .nav-links{
+        background:
+            rgba(255,255,255,.98);
     }
 
     .nav-links.open{
-        display:flex;
+        opacity:1;
+
+        visibility:visible;
+
+        pointer-events:auto;
+
+        transform:translateY(0);
+    }
+
+    .nav-links a{
+        padding:11px 12px;
+
+        border-radius:10px;
+
+        font-size:1rem;
+    }
+
+    .nav-links a:hover{
+        background:var(--card-2);
     }
 
     .hero,
@@ -886,28 +1047,144 @@ footer{
         grid-template-columns:1fr;
     }
 
+    .hero{
+        gap:28px;
+    }
+
+    header{
+        padding-top:115px;
+
+        padding-bottom:55px;
+    }
+
     .profile-photo{
         max-width:330px;
+    }
+
+    .hero-buttons{
+        display:grid;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:12px;
+
+        width:100%;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+
+        min-height:60px;
+
+        padding:13px 12px;
+
+        font-size:.94rem;
+
+        text-align:center;
     }
 
     .stats{
         grid-template-columns:repeat(2,1fr);
     }
 
-    header{
-        padding-top:120px;
+    section{
+        padding:55px 0;
+
+        scroll-margin-top:75px;
+    }
+
+    .section-heading{
+        margin-bottom:22px;
+    }
+
+    .section-heading h2{
+        font-size:1.75rem;
+    }
+
+    .card{
+        padding:21px;
+
+        border-radius:18px;
+    }
+
+    .feature{
+        padding:25px;
+
+        border-radius:21px;
+    }
+
+    .timeline{
+        margin-right:8px;
+    }
+
+    .timeline-item{
+        padding-right:24px;
     }
 }
 
 
+/* ==================================================
+   SMALL MOBILE
+   ================================================== */
+
 @media(max-width:430px){
 
-    .stats{
-        grid-template-columns:1fr 1fr;
+    .container{
+        width:min(94%,1120px);
     }
 
     .brand{
-        font-size:.9rem;
+        font-size:.88rem;
+    }
+
+    .nav-actions{
+        gap:5px;
+    }
+
+    .icon-btn,
+    .menu-btn{
+        min-height:46px;
+
+        width:46px;
+
+        padding:9px;
+    }
+
+    .hero h1{
+        font-size:
+            clamp(1.85rem,9vw,2.5rem);
+    }
+
+    .hero h2{
+        font-size:1rem;
+
+        line-height:1.8;
+    }
+
+    .hero-description{
+        font-size:.94rem;
+
+        line-height:2;
+    }
+
+    .hero-buttons{
+        gap:10px;
+    }
+
+    .hero-buttons .btn{
+        min-height:58px;
+
+        font-size:.87rem;
+
+        padding:
+            10px 7px;
+
+        border-radius:14px;
+    }
+
+    .hero-buttons .btn svg{
+        width:17px;
+        height:17px;
     }
 
     .profile-photo{
@@ -915,10 +1192,98 @@ footer{
 
         border-radius:24px;
     }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+
+        gap:9px;
+    }
+
+    .stat{
+        padding:16px 10px;
+
+        border-radius:15px;
+    }
+
+    .stat strong{
+        font-size:1.65rem;
+    }
+
+    .stat span{
+        font-size:.83rem;
+    }
+
+    section{
+        padding:48px 0;
+    }
+
+    .card{
+        padding:18px;
+
+        border-radius:17px;
+    }
+
+    .feature{
+        padding:21px;
+
+        border-radius:18px;
+    }
+
+    .pills{
+        gap:7px;
+    }
+
+    .pill{
+        padding:7px 10px;
+
+        font-size:.86rem;
+    }
+
+    .qr{
+        width:160px;
+        height:160px;
+    }
+
+    .top-btn{
+        bottom:15px;
+
+        left:15px;
+
+        width:46px;
+    }
 }
 
 
-/* Print */
+/* ==================================================
+   REDUCED MOTION
+   ================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        transition-duration:.01ms!important;
+        scroll-behavior:auto!important;
+    }
+
+    .reveal{
+        opacity:1;
+
+        transform:none;
+    }
+}
+
+
+/* ==================================================
+   PRINT
+   ================================================== */
 
 @media print{
 
@@ -977,7 +1342,9 @@ footer{
 </a>
 
 
-<!-- Navigation -->
+<!-- ==================================================
+     NAVIGATION
+     ================================================== -->
 
 <nav>
 
@@ -1017,9 +1384,15 @@ footer{
     class="menu-btn"
     id="menuBtn"
     type="button"
-    aria-label="باز کردن منو">
+    aria-label="باز کردن منو"
+    aria-expanded="false"
+    aria-controls="navLinks">
 
-    ☰
+    <span class="menu-icon" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+    </span>
 
 </button>
 
@@ -1030,7 +1403,9 @@ footer{
 </nav>
 
 
-<!-- Hero -->
+<!-- ==================================================
+     HERO
+     ================================================== -->
 
 <header>
 
@@ -1068,6 +1443,21 @@ footer{
     href="./resume-fa.pdf"
     download>
 
+    <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+
+        <path d="M12 3v12"></path>
+        <path d="m7 10 5 5 5-5"></path>
+        <path d="M5 21h14"></path>
+
+    </svg>
+
     دانلود رزومه PDF
 
 </a>
@@ -1076,6 +1466,22 @@ footer{
 <a
     class="btn"
     href="./en/">
+
+    <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3 12h18"></path>
+        <path d="M12 3c3 3 3 15 0 18"></path>
+        <path d="M12 3c-3 3-3 15 0 18"></path>
+
+    </svg>
 
     English
 
@@ -1087,6 +1493,24 @@ footer{
     id="shareBtn"
     type="button">
 
+    <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+
+        <circle cx="18" cy="5" r="2.5"></circle>
+        <circle cx="6" cy="12" r="2.5"></circle>
+        <circle cx="18" cy="19" r="2.5"></circle>
+
+        <path d="m8.3 10.8 7.4-4.5"></path>
+        <path d="m8.3 13.2 7.4 4.5"></path>
+
+    </svg>
+
     اشتراک‌گذاری
 
 </button>
@@ -1096,6 +1520,21 @@ footer{
     class="btn"
     type="button"
     onclick="window.print()">
+
+    <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+
+        <path d="M6 9V3h12v6"></path>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+        <path d="M6 14h12v7H6z"></path>
+
+    </svg>
 
     چاپ رزومه
 
@@ -1127,7 +1566,9 @@ footer{
 <main id="main">
 
 
-<!-- Statistics -->
+<!-- ==================================================
+     STATISTICS
+     ================================================== -->
 
 <div class="container">
 
@@ -1205,7 +1646,9 @@ footer{
 </div>
 
 
-<!-- About -->
+<!-- ==================================================
+     ABOUT
+     ================================================== -->
 
 <section id="about">
 
@@ -1246,7 +1689,9 @@ footer{
 </section>
 
 
-<!-- Experience -->
+<!-- ==================================================
+     EXPERIENCE
+     ================================================== -->
 
 <section id="experience">
 
@@ -1323,7 +1768,9 @@ footer{
 </section>
 
 
-<!-- Achievements -->
+<!-- ==================================================
+     ACHIEVEMENTS
+     ================================================== -->
 
 <section id="achievements">
 
@@ -1378,7 +1825,9 @@ footer{
 </section>
 
 
-<!-- BITON -->
+<!-- ==================================================
+     BITON
+     ================================================== -->
 
 <section id="biton">
 
@@ -1413,7 +1862,9 @@ footer{
 </section>
 
 
-<!-- Skills -->
+<!-- ==================================================
+     SKILLS
+     ================================================== -->
 
 <section id="skills">
 
@@ -1510,7 +1961,9 @@ footer{
 </section>
 
 
-<!-- Education -->
+<!-- ==================================================
+     EDUCATION
+     ================================================== -->
 
 <section id="education">
 
@@ -1587,7 +2040,9 @@ footer{
 </section>
 
 
-<!-- Contact -->
+<!-- ==================================================
+     CONTACT
+     ================================================== -->
 
 <section id="contact">
 
@@ -1719,7 +2174,9 @@ footer{
 </main>
 
 
-<!-- Footer -->
+<!-- ==================================================
+     FOOTER
+     ================================================== -->
 
 <footer>
 
@@ -1732,7 +2189,9 @@ footer{
 </footer>
 
 
-<!-- Back to top -->
+<!-- ==================================================
+     BACK TO TOP
+     ================================================== -->
 
 <button
     class="icon-btn top-btn"
@@ -1787,9 +2246,67 @@ const menuBtn =
 const navLinks =
     document.getElementById("navLinks");
 
+
+function closeMenu(){
+
+    navLinks.classList.remove("open");
+
+    menuBtn.classList.remove("active");
+
+    menuBtn.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    menuBtn.setAttribute(
+        "aria-label",
+        "باز کردن منو"
+    );
+
+    document.body.classList.remove(
+        "menu-open"
+    );
+
+}
+
+
+function openMenu(){
+
+    navLinks.classList.add("open");
+
+    menuBtn.classList.add("active");
+
+    menuBtn.setAttribute(
+        "aria-expanded",
+        "true"
+    );
+
+    menuBtn.setAttribute(
+        "aria-label",
+        "بستن منو"
+    );
+
+    document.body.classList.add(
+        "menu-open"
+    );
+
+}
+
+
 menuBtn.addEventListener("click", () => {
 
-    navLinks.classList.toggle("open");
+    const isOpen =
+        navLinks.classList.contains("open");
+
+    if(isOpen){
+
+        closeMenu();
+
+    }else{
+
+        openMenu();
+
+    }
 
 });
 
@@ -1798,13 +2315,68 @@ document
     .querySelectorAll("#navLinks a")
     .forEach(link => {
 
-        link.addEventListener("click", () => {
-
-            navLinks.classList.remove("open");
-
-        });
+        link.addEventListener(
+            "click",
+            closeMenu
+        );
 
     });
+
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if(event.key === "Escape"){
+
+            closeMenu();
+
+        }
+
+    }
+);
+
+
+/* ==================================================
+   CLOSE MENU WHEN CLICKING OUTSIDE
+   ================================================== */
+
+document.addEventListener(
+    "click",
+    event => {
+
+        if(
+            window.innerWidth <= 800 &&
+            navLinks.classList.contains("open") &&
+            !navLinks.contains(event.target) &&
+            !menuBtn.contains(event.target)
+        ){
+
+            closeMenu();
+
+        }
+
+    }
+);
+
+
+/* ==================================================
+   RESET MOBILE MENU ON DESKTOP
+   ================================================== */
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        if(window.innerWidth > 800){
+
+            closeMenu();
+
+        }
+
+    },
+    {passive:true}
+);
 
 
 /* ==================================================
@@ -1814,7 +2386,12 @@ document
 const revealElements =
     document.querySelectorAll(".reveal");
 
-if("IntersectionObserver" in window){
+if(
+    "IntersectionObserver" in window &&
+    !window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches
+){
 
     const observer =
         new IntersectionObserver(
@@ -2074,7 +2651,7 @@ window.addEventListener(
 
         topBtn.style.display =
             window.scrollY > 500
-                ? "block"
+                ? "inline-flex"
                 : "none";
 
     },
