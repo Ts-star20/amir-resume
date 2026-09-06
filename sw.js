@@ -1,16 +1,22 @@
-const CACHE_NAME = "amir-resume-v1";
+const CACHE_NAME = "amir-resume-v2";
 
 const FILES_TO_CACHE = [
   "./",
   "./index.html",
-  "./manifest.webmanifest"
+  "./manifest.webmanifest",
+  "./resume-fa.pdf",
+  "./qr-code.png",
+  "./icon-192.png",
+  "./icon-512.png",
+  "./en/",
+  "./en/index.html"
 ];
 
 self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(FILES_TO_CACHE);
-    })
+    caches.open(CACHE_NAME).then(cache =>
+      cache.addAll(FILES_TO_CACHE)
+    )
   );
 
   self.skipWaiting();
@@ -32,8 +38,8 @@ self.addEventListener("activate", event => {
 
 self.addEventListener("fetch", event => {
   event.respondWith(
-    caches.match(event.request).then(cached => {
-      return cached || fetch(event.request);
-    })
+    caches.match(event.request).then(cached =>
+      cached || fetch(event.request)
+    )
   );
 });
