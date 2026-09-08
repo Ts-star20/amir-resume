@@ -132,7 +132,7 @@
 
   <link
     rel="manifest"
-    href="../manifest.webmanifest"
+    href="./manifest.webmanifest"
   >
 
   <link
@@ -480,29 +480,28 @@
 
     .brand-mark {
 
-      width: 38px;
-      height: 38px;
+      width: 44px;
+      height: 44px;
 
-      display: grid;
+      display: block;
 
-      place-items: center;
+      flex: 0 0 44px;
 
-      border-radius: 11px;
+      overflow: hidden;
 
-      background:
-        linear-gradient(
-          145deg,
-          var(--gold),
-          #9b7027
-        );
-
-      color: #111;
-
-      font-weight: 1000;
+      border-radius: 12px;
 
       box-shadow:
         0 8px 25px
-        rgba(201,151,62,.25);
+        rgba(0,0,0,.18);
+    }
+
+    .brand-logo {
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
     }
 
     .brand-text {
@@ -1346,7 +1345,7 @@
 
       min-height: 220px;
 
-      padding: 28px;
+      padding: 28px 28px 76px;
 
       border:
         1px solid var(--border);
@@ -1410,6 +1409,9 @@
 
       left: 20px;
       bottom: 20px;
+
+      max-width: calc(100% - 40px);
+      white-space: nowrap;
 
       padding: 4px 9px;
 
@@ -2807,6 +2809,10 @@
         font-size: 1.75rem;
       }
 
+      .impact-card {
+        padding-bottom: 78px;
+      }
+
       .impact-grid,
       .achievement-grid,
       .projects-grid,
@@ -3203,8 +3209,9 @@
     "@type": "Person",
     "name": "Amirmasoud Abdollahi Bidgoli",
     "jobTitle": "Automotive Paint Production & Technology Manager",
-    "url": "https://ts-star20.github.io/amir-resume/",
+    "url": "https://ts-star20.github.io/amir-resume/en/",
     "image": "https://ts-star20.github.io/amir-resume/profile.jpg",
+    "inLanguage": "en-US",
     "email": "mailto:milad.marshal.63@gmail.com",
     "address": {
       "@type": "PostalAddress",
@@ -3259,7 +3266,7 @@
           class="brand-mark"
           aria-hidden="true"
         >
-          A
+          <img class="brand-logo" src="../icon-192.png" alt="" aria-hidden="true">
         </span>
 
         <span class="brand-text">
