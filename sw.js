@@ -1,15 +1,17 @@
-const CACHE_NAME = "amir-resume-v2";
+const CACHE_NAME = "amir-resume-v3";
 
 const FILES_TO_CACHE = [
   "./",
   "./index.html",
   "./manifest.webmanifest",
-  "./resume-fa.pdf",
-  "./qr-code.png",
+  "./qr-code-fa.png",
   "./icon-192.png",
   "./icon-512.png",
+  "./profile.jpg",
   "./en/",
-  "./en/index.html"
+  "./en/index.html",
+  "./en/manifest.webmanifest",
+  "./qr-code-en.png"
 ];
 
 self.addEventListener("install", event => {
